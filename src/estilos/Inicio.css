@@ -1,0 +1,179 @@
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("/imagenes/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-left:60px;
+
+    box-sizing:border-box;
+
+}
+
+.overlay{
+    display:none;
+}
+
+.heroContenido{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:760px;
+
+    color:white;
+
+    transform:translateY(40px);
+
+}
+
+.ubicacion{
+
+    color:#c8b692;
+
+    font-family:"Fustat",sans-serif;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:4px;
+
+    margin-bottom:30px;
+
+    margin-left: 15px;
+
+}
+
+.hero h1{
+
+    font-family:"Fustat",sans-serif;
+
+    font-size:98px;
+
+    line-height:.92;
+
+    font-weight:500;
+
+    color:white;
+
+    margin:0;
+
+    margin-bottom:35px;
+
+    letter-spacing:-2px;
+
+}
+
+.dorado{
+
+    color:#c8b692;
+
+    font-weight:500;
+
+}
+
+.heroDescripcion{
+
+    font-family:"Fustat",sans-serif;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#ededed;
+
+    max-width:510px;
+
+    margin-bottom:45px;
+
+}
+
+.botones{
+
+    display:flex;
+
+    gap:14px;
+
+}
+
+.btnBlanco{
+
+    background:white;
+
+    color:black;
+
+    border:none;
+
+    padding:18px 38px;
+
+    font-family:"Fustat",sans-serif;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.btnBlanco:hover{
+
+    background:#ececec;
+
+}
+
+.btnNegro{
+
+    background:transparent;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    padding:18px 38px;
+
+    font-family:"Fustat",sans-serif;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.btnNegro:hover{
+
+    background:white;
+
+    color:black;
+
+}

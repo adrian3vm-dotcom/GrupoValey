@@ -1,0 +1,89 @@
+.encabezado{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 78px;
+
+    background: #f8f7f3;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 45px;
+
+    box-sizing: border-box;
+
+    z-index: 1000;
+
+    box-shadow: 0 1px 8px rgba(0,0,0,.05);
+
+}
+
+.logo-contenedor{
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+    width: 190px;
+    cursor:pointer;
+}
+
+.nombre-empresa{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin-left:14px;
+    line-height:1;
+}
+
+.menu{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:55px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#555;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:2px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#111;
+}
+
+.acciones{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.acciones button{
+    background:#111;
+    color:white;
+
+    border:none;
+
+    padding:15px 30px;
+
+    cursor:pointer;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+}
+
+.acciones button:hover{
+    background:#666766;
+}

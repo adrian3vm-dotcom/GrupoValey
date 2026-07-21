@@ -1,0 +1,125 @@
+.piePagina {
+    background: #171816;
+    padding: 40px 5% 30px;
+}
+
+.piePaginaContenido{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+}
+.piePaginaNav{
+    justify-self:center;
+}
+
+.piePaginaRedes{
+    justify-self:end;
+}
+.piePaginaLogo {
+    width: 150px;
+    height: auto;
+    display: block;
+    transition: transform .35s ease;
+}
+
+.piePaginaLogo:hover {
+    transform: scale(1.03);
+}
+
+.piePaginaNav {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.piePaginaNav a {
+    position: relative;
+    color: #ECE8E2;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: .4px;
+    transition: color .3s ease;
+}
+
+.piePaginaNav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    width: 0;
+    height: 1px;
+    background: #C4A678;
+    transform: translateX(-50%);
+    transition: width .3s ease;
+}
+
+.piePaginaNav a:hover {
+    color: #C4A678;
+}
+
+.piePaginaNav a:hover::after {
+    width: 100%;
+}
+
+.piePaginaRedes {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.piePaginaRedes a {
+    color: #ECE8E2;
+    font-size: 22px;
+    transition: all .3s ease;
+}
+
+.piePaginaRedes a:hover {
+    color: #C4A678;
+    transform: translateY(-2px);
+}
+
+.piePaginaLinea {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,.08);
+    margin: 45px 0 24px;
+}
+
+.piePaginaCopyright {
+    text-align: center;
+    color: rgba(255,255,255,.55);
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+@media (max-width:1100px){
+
+    .piePaginaContenido{
+        flex-direction:column;
+        gap:35px;
+    }
+
+    .piePaginaNav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:28px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .piePagina{
+        padding:60px 24px 28px;
+    }
+
+    .piePaginaLogo{
+        width:130px;
+    }
+
+    .piePaginaNav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+}

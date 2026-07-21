@@ -1,0 +1,516 @@
+/*==================================================
+PROCESO
+==================================================*/
+
+.proceso{
+
+    background:#111111;
+
+    color:#ffffff;
+
+    padding:140px 70px;
+
+    overflow:hidden;
+
+}
+
+
+/*==================================================
+HEADER
+==================================================*/
+
+.procesoHeader{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.subtituloProceso{
+
+    text-align:center;
+
+    color:#d4c09a;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+    margin-bottom:30px;
+
+}
+
+
+.procesoHeader h2{
+
+    font-family: "Fustat", sans-serif;
+
+    font-size:82px;
+
+    line-height:.95;
+
+    margin-bottom:35px;
+
+}
+
+.procesoHeader p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:#bfbfbf;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}
+
+
+
+/*==================================================
+CONTENEDOR
+==================================================*/
+
+.contenedorProceso{
+
+    position:relative;
+
+    margin-top:90px;
+
+    margin-bottom:90px;
+
+}
+
+
+
+/*==================================================
+LINEAS
+==================================================*/
+
+.lineaBase{
+
+    position:absolute;
+
+    left:8%;
+
+    right:8%;
+
+    top:47px;
+
+    height:2px;
+
+    background:rgba(255,255,255,.12);
+
+    z-index:1;
+
+}
+
+.lineaActiva{
+
+    position:absolute;
+
+    left:8%;
+
+    top:47px;
+
+    height:2px;
+
+    background:#d4c09a;
+
+    z-index:2;
+
+    transition:all .6s ease;
+
+}
+
+
+
+/*==================================================
+ICONOS
+==================================================*/
+
+.iconosProceso{
+
+    position:relative;
+
+    z-index:3;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+}
+
+.paso{
+
+    width:170px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:all .55s cubic-bezier(.22,1,.36,1);
+
+}
+
+.circulo{
+
+    width:95px;
+
+    height:95px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    background:#181818;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:38px;
+
+    transition:all .55s;
+
+}
+
+.paso h3{
+
+    margin-top:24px;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:500;
+
+    line-height:1.35;
+
+}
+
+
+
+/*==================================================
+ESTADOS
+==================================================*/
+
+.paso.activo{
+
+    transform:scale(1.22);
+
+    z-index:20;
+
+}
+
+.paso.activo .circulo{
+
+    border:1px solid #d4c09a;
+
+    box-shadow:
+
+    0 0 40px rgba(212,192,154,.45);
+
+}
+
+.paso.izquierda{
+
+    transform:
+
+    translateX(-70px)
+
+    scale(.80);
+
+    opacity:.28;
+
+}
+
+.paso.derecha{
+
+    transform:
+
+    translateX(70px)
+
+    scale(.80);
+
+    opacity:.28;
+
+}
+
+.paso:hover:not(.activo){
+
+    transform:translateY(-8px);
+
+}
+/*==================================================
+DETALLE
+==================================================*/
+
+.detalleProceso{
+
+    display:grid;
+
+    grid-template-columns:1.15fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+    margin-top:30px;
+
+    animation:aparecer .45s ease;
+
+}
+
+.detalleImagen{
+
+    width:100%;
+
+}
+
+.detalleImagen img{
+
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    display:block;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.detalleTexto{
+
+    max-width:620px;
+
+}
+
+.numeroProceso{
+
+    display:inline-block;
+
+    color:#d4c09a;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    margin-bottom:22px;
+
+}
+
+.detalleTexto h3{
+
+    font-family: "Fustat", sans-serif;
+
+    font-size:62px;
+
+    line-height:.95;
+
+    margin-bottom:28px;
+
+    color:white;
+
+}
+
+.detalleTexto p{
+
+    color:#cfcfcf;
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+.detalleTexto ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.detalleTexto li{
+
+    font-size:20px;
+
+    margin-bottom:18px;
+
+    transition:.35s;
+
+}
+
+.detalleTexto li:hover{
+
+    color:#d4c09a;
+
+    transform:translateX(8px);
+
+}
+
+
+
+/*==================================================
+ANIMACIONES
+==================================================*/
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media (max-width:1200px){
+
+    .iconosProceso{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:40px;
+
+    }
+
+    .lineaBase,
+
+    .lineaActiva{
+
+        display:none;
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .proceso{
+
+        padding:100px 35px;
+
+    }
+
+    .procesoHeader h2{
+
+        font-size:60px;
+
+    }
+
+    .procesoHeader p{
+
+        font-size:19px;
+
+    }
+
+    .detalleProceso{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+
+    }
+
+    .detalleImagen img{
+
+        height:360px;
+
+    }
+
+    .detalleTexto{
+
+        max-width:100%;
+
+    }
+
+    .detalleTexto h3{
+
+        font-size:48px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .procesoHeader h2{
+
+        font-size:46px;
+
+    }
+
+    .paso{
+
+        width:140px;
+
+    }
+
+    .circulo{
+
+        width:78px;
+
+        height:78px;
+
+        font-size:30px;
+
+    }
+
+    .paso h3{
+
+        font-size:18px;
+
+    }
+
+    .detalleTexto h3{
+
+        font-size:42px;
+
+    }
+
+    .detalleTexto p{
+
+        font-size:18px;
+
+    }
+
+}

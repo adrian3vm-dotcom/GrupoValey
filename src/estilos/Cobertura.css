@@ -1,0 +1,235 @@
+.cobertura {
+    background: #171816;
+    padding: 150px 0;
+    overflow: hidden;
+}
+
+.coberturaContenido {
+    width: min(1400px, 90%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 100px;
+
+    align-items: center;
+}
+
+/* INFORMACIÓN */
+
+.coberturaInfo {
+    max-width: 620px;
+}
+
+.coberturaSubtitulo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    color: #c4a678;
+
+    font-family: "Fustat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+
+.coberturaInfo h2 {
+    margin: 35px 0 28px;
+
+    color: #f5f3ee;
+
+    font-family: "Fustat", sans-serif;
+    font-size: clamp(48px, 5vw, 78px);
+    font-weight: 600;
+    line-height: 1.03;
+    letter-spacing: -2px;
+}
+
+.coberturaInfo h2 em {
+    color: #c4a678;
+
+    font-family: "Fustat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.coberturaTexto {
+    max-width: 590px;
+
+    color: #aaa9a4;
+
+    font-family: "Fustat", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* NÚMEROS */
+
+.coberturaNumeros {
+    margin-top: 65px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.coberturaDato {
+    padding: 0 30px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.coberturaDato:first-child {
+    padding-left: 0;
+}
+
+.coberturaDato:last-child {
+    border-right: none;
+}
+
+.coberturaDato strong {
+    display: block;
+
+    color: #c4a678;
+
+    font-family: "Fustat", sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.coberturaDato span {
+    display: block;
+
+    margin-top: 15px;
+
+    color: #f5f3ee;
+
+    font-family: "Fustat", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
+/* MAPA */
+
+/* MAPA */
+
+.coberturaMapa {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.mapaContenedor {
+    width: 100%;
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+}
+
+.mapaMexico {
+    width: 95%;
+    max-width: 1000px;
+
+    height: auto;
+
+    display: block;
+}
+.estadosCobertura {
+    width: 100%;
+    margin-top: 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 12px 22px;
+}
+
+.estadosCobertura span {
+    position: relative;
+
+    color: #f5f3ee;
+
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+.estadosCobertura span:not(:last-child)::after {
+    content: "•";
+
+    position: absolute;
+    right: -15px;
+
+    color: #c4a678;
+}
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .cobertura {
+        padding: 100px 0;
+    }
+
+    .coberturaContenido {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+    .coberturaInfo {
+        max-width: 100%;
+    }
+
+    .mapaContenedor {
+        min-height: 400px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .coberturaInfo h2 {
+        font-size: 45px;
+    }
+
+    .coberturaNumeros {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .coberturaDato {
+        padding: 0 0 30px;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .coberturaDato:last-child {
+        border-bottom: none;
+    }
+
+    .mapaContenedor {
+        min-height: 300px;
+    }
+
+}

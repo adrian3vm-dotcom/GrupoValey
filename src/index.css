@@ -1,0 +1,36 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:inherit;
+}
+
+html,
+body,
+#root{
+  width:100%;
+  min-height:100%;
+}
+
+body{
+  font-family:"Fustat",sans-serif;
+  background:#ffffff;
+  color:#111111;
+  overflow-x:hidden;
+}
+
+#root{
+  width:100%;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button,
+input,
+textarea,
+select{
+  font-family:inherit;
+}

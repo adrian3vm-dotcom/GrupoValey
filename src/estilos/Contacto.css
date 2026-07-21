@@ -1,0 +1,243 @@
+.contacto{
+
+    background:#f7f4ef;
+
+    padding:120px 0;
+
+}
+
+.contactoContainer{
+
+    width:min(1700px,92%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1.2fr;
+
+    gap:120px;
+
+    align-items:center;
+
+}
+.contactoInfo span{
+
+    color:#c4a678;
+
+    font-family:"Fustat",sans-serif;
+
+    letter-spacing:8px;
+
+    font-size:18px;
+
+}
+
+.contactoInfo h2{
+
+    margin-top:18px;
+
+    font-size:92px;
+
+    line-height:.95;
+
+    font-family:"Fustat",sans-serif;
+
+    font-weight:500;
+
+    color:#171816;
+
+}
+
+.contactoInfo .linea{
+
+    width:70px;
+
+    height:2px;
+
+    background:#c4a678;
+
+    margin:40px 0;
+
+}
+
+.contactoInfo p{
+
+    max-width:500px;
+
+    font-size:20px;
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+.contactoFormulario form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:45px;
+
+}
+
+.fila{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+}
+
+.campo{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.campo label{
+
+    margin-bottom:15px;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+
+    color:#444;
+
+}
+
+.campo input,
+.campo textarea{
+
+    border:none;
+
+    border-bottom:1px solid #bbb;
+
+    background:transparent;
+
+    padding:12px 0;
+
+    font-size:18px;
+
+    outline:none;
+
+    transition:.35s;
+
+}
+
+.campo textarea{
+
+    resize:none;
+
+}
+
+.campo input:focus,
+.campo textarea:focus{
+
+    border-color:#c4a678;
+
+}
+.contactoFormulario button{
+
+    position: relative;
+    overflow: hidden;
+
+    height:74px;
+    padding:0 55px;
+
+    background:#171816;
+    color:#fff;
+
+    border:none;
+    cursor:pointer;
+
+    font-size:15px;
+    letter-spacing:4px;
+    font-family:"Fustat",sans-serif;
+
+    transition:color .35s ease;
+
+    z-index:1;
+
+}
+
+/* Fondo dorado */
+.contactoFormulario button::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:#c4a678;
+
+    transform:translateX(100%);
+
+    transition:transform 1s cubic-bezier(.22,1,.36,1);
+
+    z-index:-1;
+
+}
+
+/* El dorado entra de derecha a izquierda */
+.contactoFormulario button:hover::before{
+
+    transform:translateX(0);
+
+}
+
+/* Cambia el texto */
+.contactoFormulario button:hover{
+
+    color:#101010;
+
+}
+
+/* La flecha se mueve un poquito */
+.contactoFormulario button{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+}
+
+.contactoFormulario button:hover{
+
+    gap:18px;
+
+}
+
+/* Al hacer click queda dorado inmediatamente */
+.contactoFormulario button:active{
+
+    background:#c4a678;
+    color:#171816;
+    transition:none;
+
+}
+
+.contactoFormulario button:active::before{
+
+    transition:none;
+    transform:translateX(0);
+
+}
+.flecha{
+
+    transition:transform 1s ease;
+
+}
+
+.contactoFormulario button:hover .flecha{
+
+    transform:translateX(10px);
+
+}

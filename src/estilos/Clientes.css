@@ -1,0 +1,121 @@
+.clientes {
+    background: #f4f1eb;
+    padding: 140px 0;
+    overflow: hidden;
+}
+
+.clientesHeader {
+    width: min(1200px, 88%);
+    margin: 0 auto 90px;
+    text-align: center;
+}
+
+.subtituloClientes {
+
+    text-align: center;
+
+    color: #9c8155;
+
+    font-family: "Fustat", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 28px;
+
+}
+
+.clientesHeader h2 {
+    margin: 28px 0 25px;
+
+    color: #111;
+    font-family: "Fustat", sans-serif;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.05;
+}
+
+.clientesHeader p {
+    max-width: 650px;
+    margin: auto;
+
+    color: #555;
+    font-family: "Fustat", sans-serif;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.carruselClientes {
+    width: 100%;
+    overflow: hidden;
+
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+}
+
+.logosTrack {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 85px;
+
+    animation: moverLogos 28s linear infinite;
+}
+
+.carruselClientes:hover .logosTrack {
+    animation-play-state: paused;
+}
+
+.clienteLogo {
+    width: 190px;
+    height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.clienteLogo img {
+    max-width: 100%;
+    max-height: 75px;
+    object-fit: contain;
+
+    filter: grayscale(100%);
+    opacity: 0.62;
+
+    transition: 0.35s;
+}
+
+.clienteLogo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+@keyframes moverLogos {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
