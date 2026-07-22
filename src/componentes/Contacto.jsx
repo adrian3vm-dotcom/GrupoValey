@@ -1,128 +1,238 @@
-import "../estilos/Contacto.css";
-export default function Contacto(){
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
-    return(
+import "../estilos/Contacto.css";
+
+export default function Contacto() {
+
+    const form = useRef();
+
+    const [enviando, setEnviando] = useState(false);
+    const [estado, setEstado] = useState("");
+
+    const enviarFormulario = (e) => {
+
+        e.preventDefault();
+
+        setEnviando(true);
+        setEstado("");
+
+        emailjs
+            .sendForm(
+                "service_2jlubur",
+                "template_4npx0tg",
+                form.current,
+                "2AY9vo5MuF6O5GlLI"
+            )
+
+            .then(() => {
+
+                setEstado("success");
+
+                form.current.reset();
+
+            })
+
+            .catch((error) => {
+
+                console.error(error);
+
+                setEstado("error");
+
+            })
+
+            .finally(() => {
+
+                setEnviando(false);
+
+            });
+
+    };
+
+    return (
 
         <section id="contacto" className="contacto">
 
             <div className="contactoContainer">
 
-<div className="contactoInfo">
+                <div className="contactoInfo">
 
-    <span>CONTACTO</span>
+                    <span>CONTACTO</span>
 
-    <h2>
+                    <h2>
 
-        HABLEMOS
+                        HABLEMOS
 
-        <br />
+                        <br />
 
-        DE SU
+                        DE SU
 
-        <br />
+                        <br />
 
-        PROYECTO
+                        PROYECTO
 
-    </h2>
+                    </h2>
 
-    <div className="linea"></div>
+                    <div className="linea"></div>
 
-    <p>
+                    <p>
 
-        Nos gusta conocer las ideas desde el principio. 
-        Cuéntenos la suya y nos pondremos en contacto 
-         con usted. 
-      
-        <br /><br />
+                        Nos gusta conocer las ideas desde el principio.
 
-        admin@grupovaley.com
+                        Cuéntenos la suya y nos pondremos en contacto
+                        con usted.
 
-    </p>
+                        <br /><br />
 
-</div>
+                        admin@grupovaley.com
 
-<div className="contactoFormulario">
+                    </p>
 
-    <form>
+                </div>
 
-        <div className="fila">
+                <div className="contactoFormulario">
 
-            <div className="campo">
+                    <form
+                        ref={form}
+                        onSubmit={enviarFormulario}
+                    >
 
-                <label>Nombre</label>
+                        <div className="fila">
 
-                <input
-                    type="text"
-                    name="nombre"
-                />
+                            <div className="campo">
 
-            </div>
+                                <label>Nombre</label>
 
-            <div className="campo">
+                                <input
+                                    type="text"
+                                    name="nombre"
+                                    required
+                                />
 
-                <label>Empresa (opcional)</label>
+                            </div>
 
-                <input
-                    type="text"
-                    name="empresa"
-                />
+                            <div className="campo">
 
-            </div>
+                                <label>Empresa (opcional)</label>
 
-        </div>
+                                <input
+                                    type="text"
+                                    name="empresa"
+                                />
 
-        <div className="fila">
+                            </div>
 
-            <div className="campo">
+                        </div>
 
-                <label>Correo electrónico</label>
+                        <div className="fila">
 
-                <input
-                    type="email"
-                    name="correo"
-                />
+                            <div className="campo">
 
-            </div>
+                                <label>Correo electrónico</label>
 
-            <div className="campo">
+                                <input
+                                    type="email"
+                                    name="correo"
+                                    required
+                                />
 
-                <label>Teléfono</label>
+                            </div>
 
-                <input
-                    type="tel"
-                    name="telefono"
-                />
+                            <div className="campo">
 
-            </div>
+                                <label>Teléfono</label>
 
-        </div>
+                                <input
+                                    type="tel"
+                                    name="telefono"
+                                    required
+                                />
 
-        <div className="campo">
+                            </div>
 
-            <label>¿Cómo podemos ayudarle?</label>
+                        </div>
 
-            <textarea
-                rows="6"
-                name="mensaje"
-            ></textarea>
+                        <div className="campo">
 
-        </div>
+                            <label>¿Cómo podemos ayudarle?</label>
 
-        <button type="submit">
+                            <textarea
+                                rows="6"
+                                name="mensaje"
+                                required
+                            ></textarea>
 
-            <span>ENVIAR</span>
-        <span className="flecha">→</span>
+                        </div>
 
-        </button>
+                        <button
+                            type="submit"
+                            disabled={enviando}
+                        >
 
-    </form>
+                            <span>
 
-</div>
+                                {enviando
+                                    ? "ENVIANDO..."
+                                    : "ENVIAR"}
+
+                            </span>
+
+                            <span className="flecha">
+
+                                →
+
+                            </span>
+
+                        </button>
+
+                        {
+
+                            estado === "success" && (
+
+                                <div className="mensajeExito">
+
+                                    <strong>
+
+                                        ✓ Solicitud enviada correctamente.
+
+                                    </strong>
+
+                                    <br />
+
+                                    Gracias por contactar a Grupo Valey.
+
+                                    Nuestro equipo revisará su información y se pondrá en contacto con usted a la brevedad.
+
+                                </div>
+
+                            )
+
+                        }
+
+                        {
+
+                            estado === "error" && (
+
+                                <div className="mensajeError">
+
+                                    Hubo un problema al enviar la solicitud.
+
+                                    Intente nuevamente en unos minutos.
+
+                                </div>
+
+                            )
+
+                        }
+
+                    </form>
+
+                </div>
 
             </div>
 
         </section>
 
-    )
+    );
 
 }

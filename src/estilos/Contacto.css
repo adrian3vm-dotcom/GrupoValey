@@ -241,3 +241,44 @@
     transform:translateX(10px);
 
 }
+.mensajeExito{
+
+    margin-top:24px;
+
+    padding:18px 22px;
+
+    border:1px solid #d6c08b;
+
+    background:#f8f6ef;
+
+    color:#222;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+.mensajeError{
+
+    margin-top:24px;
+
+    padding:18px 22px;
+
+    border:1px solid #d9534f;
+
+    background:#fff4f4;
+
+    color:#b00020;
+
+    font-size:15px;
+
+}
+
+button:disabled{
+
+    opacity:.65;
+
+    cursor:not-allowed;
+
+}
