@@ -8,7 +8,7 @@
 
     grid-template-columns:1fr 1fr;
 
-    background:#f6f3ed;
+    background:#f7f4ef;
 
     align-items:center;
 
@@ -232,7 +232,7 @@ BOTÓN
 
 .btnNosotros:hover{
 
-    background:#2f5b45;
+    background:#c4a678;
 
     transform:translateY(-3px);
 

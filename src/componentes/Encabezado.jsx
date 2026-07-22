@@ -5,23 +5,26 @@ function Encabezado() {
     <header className="encabezado">
 
       <div className="logo-contenedor">
-        <img
-          src="/grupo-valey/logo-negro.png"
-          alt="Grupo Valey"
-          className="logo"
-        />
-        
+        <a href="#inicio">
+          <img
+            src="/grupo-valey/logo-negro.webp"
+            alt="Grupo Valey"
+            className="logo"
+          />
+        </a>
       </div>
 
       <nav className="menu">
-        <a href="#">CONSTRUCTORA</a>
-        <a href="#">SERVICIOS</a>
-        <a href="#">PRESENCIA</a>
-        <a href="#">CONTACTO</a>
+        <a href="#proyectos">CONSTRUCTORA</a>
+        <a href="#proceso">SERVICIOS</a>
+        <a href="#cobertura">PRESENCIA</a>
+        <a href="#contacto">CONTACTO</a>
       </nav>
 
       <div className="acciones">
-        <button>COTIZAR</button>
+        <a href="#contacto">
+          <button>COTIZAR</button>
+        </a>
       </div>
 
     </header>

@@ -8,7 +8,7 @@
 
     background-image:
     linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url("/imagenes/hero.jpg");
+    url("/imagenes/hero.webp");
 
     background-size:cover;
 
@@ -176,4 +176,11 @@
 
     color:black;
 
+}
+.btnBlanco,
+.btnNegro {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }

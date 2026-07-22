@@ -7,7 +7,7 @@ function Nosotros() {
       <div className="nosotrosImagen">
 
         <img
-          src="/imagenes/nosotros/edificio-principal.jpg"
+          src="/imagenes/nosotros/edificio-principal.webp"
           alt="Edificio Grupo Valey"
         />
 
@@ -47,9 +47,9 @@ function Nosotros() {
           cada cliente y entregando proyectos que perduran.
         </p>
 
-        <button className="btnNosotros">
+        <a href="#proyectos" className="btnNosotros">
           VER PROYECTOS
-        </button>
+        </a>
 
       </div>
 

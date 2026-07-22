@@ -15,7 +15,7 @@ const procesos = [
       "Servicios disponibles",
       "Viabilidad financiera",
     ],
-    imagen: "/imagenes/proceso/01.jpg",
+    imagen: "/imagenes/proceso/01.webp",
   },
 
   {
@@ -31,7 +31,7 @@ const procesos = [
       "Coordinación",
       "Presupuesto",
     ],
-    imagen: "/imagenes/proceso/02.jpg",
+    imagen: "/imagenes/proceso/02.webp",
   },
 
   {
@@ -47,7 +47,7 @@ const procesos = [
       "Catálogo de conceptos",
       "Cuantificaciones",
     ],
-    imagen: "/imagenes/proceso/03.jpg",
+    imagen: "/imagenes/proceso/03.webp",
   },
 
   {
@@ -63,7 +63,7 @@ const procesos = [
       "Municipio",
       "Dependencias",
     ],
-    imagen: "/imagenes/proceso/04.jpg",
+    imagen: "/imagenes/proceso/04.webp",
   },
 
   {
@@ -79,7 +79,7 @@ const procesos = [
       "Avances",
       "Entrega",
     ],
-    imagen: "/imagenes/proceso/05.jpg",
+    imagen: "/imagenes/proceso/05.webp",
   },
 
   {
@@ -95,7 +95,7 @@ const procesos = [
       "Seguimiento",
       "Soporte",
     ],
-    imagen: "/imagenes/proceso/06.jpg",
+    imagen: "/imagenes/proceso/06.webp",
   },
 ];
 

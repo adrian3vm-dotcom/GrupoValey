@@ -63,7 +63,7 @@ function Cobertura() {
           <div className="mapaContenedor">
 
             <img
-              src="/mapa-mexico.png"
+              src="/mapa-mexico.webp"
               alt="Presencia de Grupo Valey en México"
               className="mapaMexico"
             />

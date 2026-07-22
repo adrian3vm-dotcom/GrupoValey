@@ -9,7 +9,7 @@ function Inicio() {
       <div className="heroContenido">
 
         <p className="ubicacion">
-          HERMOSILLO, SONORA 
+          HERMOSILLO, SONORA
         </p>
 
         <h1>
@@ -17,11 +17,11 @@ function Inicio() {
           <br />
 
           <span className="dorado">
-            VALOR REAL 
+            VALOR REAL
           </span>
           <br />
 
-            PARA TU INVERSION
+          PARA TU INVERSION
         </h1>
 
         <p className="heroDescripcion">
@@ -31,13 +31,13 @@ function Inicio() {
 
         <div className="botones">
 
-          <button className="btnBlanco">
+          <a href="#proceso" className="btnBlanco">
             VER SERVICIOS
-          </button>
+          </a>
 
-          <button className="btnNegro">
+          <a href="#contacto" className="btnNegro">
             COTIZAR AHORA
-          </button>
+          </a>
 
         </div>
 

@@ -2,8 +2,8 @@ const industriales = [
   {
     id: 1,
     cliente: "Ternium",
-    imagen: "/proyectos/industrial/Ternium.jpg",
-    logo: "/logos/clientes/ternium logo.png",
+    imagen: "/proyectos/industrial/Ternium.webp",
+    logo: "/logos/clientes/ternium logo.webp",
     ubicacion: " Pesquería, Nuevo León",
     area: "20,000m²",
     anio: "2025",
@@ -12,7 +12,7 @@ const industriales = [
   {
     id: 2,
     cliente: "COPPEL",
-    imagen: "/proyectos/industrial/coppel.jpg",
+    imagen: "/proyectos/industrial/coppel.webp",
     logo: "/logos/clientes/coppel logo.svg",
     ubicacion: "Hermosillo, Sonora",
     area: "5,000m²",
@@ -22,8 +22,8 @@ const industriales = [
   {
     id: 3,
     cliente: "CEDC",
-    imagen: "/proyectos/industrial/CEDC.jpg",
-    logo: "/logos/clientes/china energy logo.png",
+    imagen: "/proyectos/industrial/CEDC.webp",
+    logo: "/logos/clientes/china energy logo.webp",
     ubicacion: "Puerto Peñasco, Sonora",
     area: "9.5km",
     anio: "2023",
@@ -32,8 +32,8 @@ const industriales = [
   {
     id: 4,
     cliente: "DISTLAB",
-    imagen: "/proyectos/industrial/distlab.jpg",
-    logo: "/logos/clientes/distlab.png",
+    imagen: "/proyectos/industrial/distlab.webp",
+    logo: "/logos/clientes/distlab.webp",
     ubicacion: "Hermosillo, Sonora",
     area: "1,960 m²",
     anio: "2024",
@@ -42,8 +42,8 @@ const industriales = [
   {
     id: 5,
     cliente: "ARCA",
-    imagen: "/proyectos/industrial/ARCA.jpg",
-    logo: "/logos/clientes/Arca.png",
+    imagen: "/proyectos/industrial/ARCA.webp",
+    logo: "/logos/clientes/Arca.webp",
     ubicacion: "Hermosillo, Sonora",
     area: "2,000m²",
     anio: "2021",
@@ -52,8 +52,8 @@ const industriales = [
   {
     id: 6,
     cliente: "Mercado Libre",
-    imagen: "/proyectos/industrial/navemeli.jpg",
-    logo: "/logos/clientes/meli.png",
+    imagen: "/proyectos/industrial/navemeli.webp",
+    logo: "/logos/clientes/meli.webp",
     ubicacion: "Obregón, Sonora",
     area: "8,500m²",
     anio: "2026",

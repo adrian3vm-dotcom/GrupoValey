@@ -3,23 +3,23 @@ import "../estilos/Clientes.css";
 const clientes = [
  {
       nombre: "DISTLAB",
-    logo: "/logos/clientes/distlab.png",
+    logo: "/logos/clientes/distlab.webp",
  },
  {
     nombre: "Cash N Go",
-    logo: "/logos/clientes/cashngo logo.png",
+    logo: "/logos/clientes/cashngo logo.webp",
   },
   {
     nombre: "Sonora Naturals",
-    logo: "/logos/clientes/sonora naturals logo.jpg",
+    logo: "/logos/clientes/sonora naturals logo.webp",
   },
   {
     nombre: "BBVA",
-    logo: "/logos/clientes/BBVA logo.jpg",
+    logo: "/logos/clientes/BBVA logo.webp",
   },
   {
     nombre: "Caffenio",
-    logo: "/logos/clientes/caffenio logo.png",
+    logo: "/logos/clientes/caffenio logo.webp",
   },
   {
     nombre: "Coppel",
@@ -27,80 +27,80 @@ const clientes = [
   },
   {
     nombre: "China Energy",
-    logo: "/logos/clientes/china energy logo.png",
+    logo: "/logos/clientes/china energy logo.webp",
   },
   {
     nombre: "Construplan",
-    logo: "/logos/clientes/construplan logo.png",
+    logo: "/logos/clientes/construplan logo.webp",
   },
   {
     nombre: "CT",
-    logo: "/logos/clientes/ct logo.png",
+    logo: "/logos/clientes/ct logo.webp",
   },
   {
     nombre: "Fresnillo",
-    logo: "/logos/clientes/fresnillo logo.png",
+    logo: "/logos/clientes/fresnillo logo.webp",
   },
   {
     nombre: "Grupo Delza",
-    logo: "/logos/clientes/grupo delza logo.png",
+    logo: "/logos/clientes/grupo delza logo.webp",
   },
   {
     nombre: "Grupo México",
-    logo: "/logos/clientes/grupo mexico logo.png",
+    logo: "/logos/clientes/grupo mexico logo.webp",
   },
   {
     nombre: "Lear",
-    logo: "/logos/clientes/lear logo.png",
+    logo: "/logos/clientes/lear logo.webp",
  
   },
   {
     nombre: "Osisko Development",
-    logo: "/logos/clientes/osisko development.png",
+    logo: "/logos/clientes/osisko development.webp",
   },
   {
     nombre: "Parque La Ruina",
-    logo: "/logos/clientes/parque la ruina logo.jpg",
+    logo: "/logos/clientes/parque la ruina logo.webp",
   },
   {
     nombre: "Pollo Feliz",
-    logo: "/logos/clientes/pollo feliz logo.png",
+    logo: "/logos/clientes/pollo feliz logo.webp",
   },
   {
     nombre: "Ruba",
-    logo: "/logos/clientes/ruba logo.png",
+    logo: "/logos/clientes/ruba logo.webp",
   },
   {
     nombre: "San Carlos Plaza",
-    logo: "/logos/clientes/san carlos plaza logo.jpg",
+    logo: "/logos/clientes/san carlos plaza logo.webp",
   },
   {
     nombre: "Sedona",
-    logo: "/logos/clientes/sedona.png",
+    logo: "/logos/clientes/sedona.webp",
   },
   {
     nombre: "Selecta",
-    logo: "/logos/clientes/selecta logo.png",
+    logo: "/logos/clientes/selecta logo.webp",
   },
   {
     nombre: "SilverCrest",
-    logo: "/logos/clientes/silvercrest logo.png",
+    logo: "/logos/clientes/silvercrest logo.webp",
   },
   {
     nombre: "Gobierno de Sonora",
-    logo: "/logos/clientes/sonora gob logo.png",
+    logo: "/logos/clientes/sonora gob logo.webp",
   },
   {
     nombre: "Super Leyva",
-    logo: "/logos/clientes/super leyva logo.jpg",
+    logo: "/logos/clientes/super leyva logo.webp",
   },
   {
     nombre: "Ternium",
-    logo: "/logos/clientes/ternium logo.png",
+    logo: "/logos/clientes/ternium logo.webp",
   },
   {
     nombre: "Walbridge",
-    logo: "/logos/clientes/walbridge logo.png",
+    logo: "/logos/clientes/walbridge logo.webp",
   },
 ];
 

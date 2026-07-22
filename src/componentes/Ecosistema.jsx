@@ -5,19 +5,19 @@ const empresas = [
         titulo: "CONSTRUCTORA",
         descripcion:
             "Ejecución de obra civil, industrial y comercial con los más altos estándares de calidad.",
-        imagen: "/imagenes/ecosistema/construccion.png",
+        imagen: "/imagenes/ecosistema/construccion.webp",
     },
     {
         titulo: "INMOBILIARIA",
         descripcion:
             "Compra, venta y comercialización de propiedades con asesoría personalizada.",
-        imagen: "/imagenes/ecosistema/inmobiliaria.jpg",
+        imagen: "/imagenes/ecosistema/inmobiliaria.webp",
     },
     {
         titulo: "DESARROLLADORA",
         descripcion:
             "Planeación y desarrollo de proyectos inmobiliarios que generan valor.",
-        imagen: "/imagenes/ecosistema/desarrolladora.jpg",
+        imagen: "/imagenes/ecosistema/desarrolladora.webp",
     },
 ];
 
