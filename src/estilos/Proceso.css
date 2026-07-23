@@ -8,7 +8,9 @@ PROCESO
 
     color:#ffffff;
 
-    padding:140px 70px;
+    padding:
+    clamp(80px,10vw,140px)
+    clamp(24px,6vw,70px);
 
     overflow:hidden;
 
@@ -35,7 +37,7 @@ HEADER
 
     color:#d4c09a;
 
-    font-size:13px;
+    font-size:clamp(11px,1.2vw,13px);
 
     letter-spacing:3px;
 
@@ -50,7 +52,7 @@ HEADER
 
     font-family: "Fustat", sans-serif;
 
-    font-size:82px;
+    font-size:clamp(46px,7vw,82px);
 
     line-height:.95;
 
@@ -66,7 +68,7 @@ HEADER
 
     color:#bfbfbf;
 
-    font-size:22px;
+    font-size:clamp(17px,2vw,22px);
 
     line-height:1.8;
 
@@ -84,7 +86,9 @@ CONTENEDOR
 
     margin-top:90px;
 
-    margin-bottom:90px;
+    margin:
+    clamp(50px,8vw,90px)
+    0;
 
 }
 
@@ -152,7 +156,7 @@ ICONOS
 
 .paso{
 
-    width:170px;
+    width:clamp(120px,14vw,170px);
 
     text-align:center;
 
@@ -164,9 +168,9 @@ ICONOS
 
 .circulo{
 
-    width:95px;
+    width:clamp(72px,7vw,95px);
 
-    height:95px;
+    height:clamp(72px,7vw,95px);
 
     margin:auto;
 
@@ -182,7 +186,7 @@ ICONOS
 
     align-items:center;
 
-    font-size:38px;
+    font-size:clamp(28px,3vw,38px);
 
     transition:all .55s;
 
@@ -194,7 +198,7 @@ ICONOS
 
     color:white;
 
-    font-size:22px;
+    font-size:clamp(18px,2vw,22px);
 
     font-weight:500;
 
@@ -263,9 +267,10 @@ DETALLE
 
     display:grid;
 
-    grid-template-columns:1.15fr 1fr;
+    grid-template-columns:
+    repeat(auto-fit,minmax(min(100%,420px),1fr));
 
-    gap:80px;
+    gap:clamp(35px,6vw,80px);
 
     align-items:center;
 
@@ -285,7 +290,11 @@ DETALLE
 
     width:100%;
 
-    height:520px;
+    aspect-ratio:16/10;
+
+    height:auto;
+
+    max-width:100%;
 
     object-fit:cover;
 
@@ -321,7 +330,7 @@ DETALLE
 
     font-family: "Fustat", sans-serif;
 
-    font-size:62px;
+    font-size:clamp(38px,5vw,62px);
 
     line-height:.95;
 
@@ -335,7 +344,7 @@ DETALLE
 
     color:#cfcfcf;
 
-    font-size:22px;
+    font-size:clamp(17px,2vw,22px);
 
     line-height:1.9;
 
@@ -353,7 +362,7 @@ DETALLE
 
 .detalleTexto li{
 
-    font-size:20px;
+    font-size:clamp(16px,2vw,20px);
 
     margin-bottom:18px;
 
@@ -427,7 +436,9 @@ RESPONSIVE
 
     .proceso{
 
-        padding:100px 35px;
+        padding:
+        clamp(70px,8vw,100px)
+        clamp(24px,4vw,35px);
 
     }
 
@@ -451,11 +462,6 @@ RESPONSIVE
 
     }
 
-    .detalleImagen img{
-
-        height:360px;
-
-    }
 
     .detalleTexto{
 
@@ -479,11 +485,6 @@ RESPONSIVE
 
     }
 
-    .paso{
-
-        width:140px;
-
-    }
 
     .circulo{
 
@@ -513,4 +514,46 @@ RESPONSIVE
 
     }
 
-}
+    .proceso{
+        padding:clamp(60px,8vw,80px) 24px;
+    }
+
+    .contenedorProceso{
+        margin:60px 0;
+    }
+
+    .iconosProceso{
+        display:grid;
+        grid-template-columns:
+        repeat(auto-fit,minmax(130px,1fr));
+        gap:30px;
+        justify-items:center;
+    }
+
+    .paso,
+    .paso.activo,
+    .paso.izquierda,
+    .paso.derecha{
+
+        width:100%;
+        transform:none;
+        opacity:1;
+
+    }
+
+    .detalleProceso{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+    .detalleImagen img{
+
+        aspect-ratio:16/10;
+
+        height:auto;
+    }
+
+} 

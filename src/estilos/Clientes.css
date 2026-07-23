@@ -1,12 +1,16 @@
 .clientes {
     background: #f7f4ef;
-    padding: 140px 0;
+    padding:
+    clamp(80px,10vw,140px)
+    0;
     overflow: hidden;
 }
 
 .clientesHeader {
     width: min(1200px, 88%);
-    margin: 0 auto 90px;
+    margin:
+    0 auto
+    clamp(50px,8vw,90px);
     text-align: center;
 }
 
@@ -18,7 +22,7 @@
 
     font-family: "Fustat", sans-serif;
 
-    font-size: 13px;
+    font-size:clamp(11px,1.2vw,13px);
 
     font-weight: 700;
 
@@ -33,7 +37,7 @@
 
     color: #111;
     font-family: "Fustat", sans-serif;
-    font-size: 68px;
+    font-size:clamp(42px,6vw,68px);
     font-weight: 700;
     line-height: 1.05;
 }
@@ -44,7 +48,7 @@
 
     color: #555;
     font-family: "Fustat", sans-serif;
-    font-size: 20px;
+    font-size:clamp(17px,2vw,20px);
     line-height: 1.7;
 }
 
@@ -73,7 +77,7 @@
     width: max-content;
     display: flex;
     align-items: center;
-    gap: 85px;
+    gap:clamp(35px,6vw,85px);
 
     animation: moverLogos 28s linear infinite;
 }
@@ -82,26 +86,36 @@
     animation-play-state: paused;
 }
 
-.clienteLogo {
-    width: 190px;
-    height: 110px;
+.clienteLogo{
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width:clamp(130px,14vw,190px);
 
-    flex-shrink: 0;
+    height:clamp(80px,8vw,110px);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    box-sizing:border-box;
+
 }
 
 .clienteLogo img {
     max-width: 100%;
-    max-height: 75px;
+    max-height:clamp(50px,6vw,75px);
     object-fit: contain;
 
     filter: grayscale(100%);
     opacity: 0.62;
 
-    transition: 0.35s;
+    transition:
+    transform .35s,
+    opacity .35s,
+    filter .35s;
 }
 
 .clienteLogo:hover img {
@@ -118,4 +132,29 @@
     to {
         transform: translateX(-50%);
     }
+}
+@media (max-width:768px){
+
+.clientes{
+
+    padding:
+    clamp(60px,8vw,80px)
+    0;
+
+}
+
+.clientesHeader{
+
+    width:90%;
+
+    margin-bottom:clamp(35px,6vw,55px);
+}
+
+
+.logosTrack{
+
+    gap:clamp(25px,5vw,45px);
+
+}
+
 }

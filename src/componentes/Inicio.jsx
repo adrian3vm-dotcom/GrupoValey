@@ -21,7 +21,7 @@ function Inicio() {
           </span>
           <br />
 
-          PARA TU INVERSION
+          PARA TU INVERSIÓN
         </h1>
 
         <p className="heroDescripcion">

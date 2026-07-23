@@ -2,7 +2,9 @@
 
     background:#f7f4ef;
 
-    padding:120px 0;
+    padding:
+    clamp(80px,10vw,120px)
+    0;
 
 }
 
@@ -14,9 +16,10 @@
 
     display:grid;
 
-    grid-template-columns:1fr 1.2fr;
+    grid-template-columns:
+    repeat(auto-fit,minmax(min(100%,500px),1fr));
 
-    gap:120px;
+    gap:clamp(50px,8vw,120px);
 
     align-items:center;
 
@@ -29,7 +32,7 @@
 
     letter-spacing:8px;
 
-    font-size:18px;
+    font-size:clamp(13px,1.8vw,18px);
 
 }
 
@@ -37,7 +40,7 @@
 
     margin-top:18px;
 
-    font-size:92px;
+    font-size:clamp(48px,8vw,92px);
 
     line-height:.95;
 
@@ -51,13 +54,15 @@
 
 .contactoInfo .linea{
 
-    width:70px;
+    width:clamp(50px,6vw,70px);
 
     height:2px;
 
     background:#c4a678;
 
-    margin:40px 0;
+    margin:
+    clamp(25px,4vw,40px)
+    0;
 
 }
 
@@ -65,7 +70,7 @@
 
     max-width:500px;
 
-    font-size:20px;
+    font-size:clamp(17px,2vw,20px);
 
     color:#666;
 
@@ -78,7 +83,7 @@
 
     flex-direction:column;
 
-    gap:45px;
+    gap:clamp(28px,5vw,45px);
 
 }
 
@@ -88,7 +93,7 @@
 
     grid-template-columns:1fr 1fr;
 
-    gap:40px;
+    gap:clamp(20px,4vw,40px);
 
 }
 
@@ -104,7 +109,7 @@
 
     margin-bottom:15px;
 
-    font-size:15px;
+    font-size:clamp(14px,1.3vw,15px);
 
     letter-spacing:1px;
 
@@ -121,9 +126,11 @@
 
     background:transparent;
 
-    padding:12px 0;
+    padding:
+    clamp(10px,2vw,12px)
+    0;
 
-    font-size:18px;
+    font-size:clamp(16px,1.8vw,18px);
 
     outline:none;
 
@@ -148,8 +155,9 @@
     position: relative;
     overflow: hidden;
 
-    height:74px;
-    padding:0 55px;
+    height:clamp(60px,7vw,74px);
+    padding:
+    0 clamp(30px,5vw,55px);
 
     background:#171816;
     color:#fff;
@@ -243,9 +251,11 @@
 }
 .mensajeExito{
 
-    margin-top:24px;
+    margin-top:clamp(18px,3vw,24px);
 
-    padding:18px 22px;
+    padding:
+    clamp(14px,2vw,18px)
+    clamp(18px,3vw,22px);
 
     border:1px solid #d6c08b;
 
@@ -261,9 +271,11 @@
 
 .mensajeError{
 
-    margin-top:24px;
+    margin-top:clamp(18px,3vw,24px);
 
-    padding:18px 22px;
+    padding:
+    clamp(14px,2vw,18px)
+    clamp(18px,3vw,22px);
 
     border:1px solid #d9534f;
 
@@ -280,5 +292,40 @@ button:disabled{
     opacity:.65;
 
     cursor:not-allowed;
+
+}
+@media (max-width:768px){
+
+.contacto{
+
+    padding:
+    clamp(60px,8vw,80px)
+    0;
+
+}
+
+.contactoContainer{
+
+    width:min(1700px,92%);
+
+    grid-template-columns:1fr;
+
+    gap:clamp(35px,6vw,60px);
+
+}
+
+
+.fila{
+
+    grid-template-columns:1fr;
+
+    gap:clamp(18px,4vw,25px);
+}
+
+.contactoFormulario button{
+
+    width:100%;
+
+}
 
 }

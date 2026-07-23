@@ -19,7 +19,9 @@
 
     background-attachment:fixed;
 
-    padding:170px 70px;
+    padding:
+        clamp(90px,12vw,170px)
+        clamp(24px,6vw,70px);
 
     color:white;
 
@@ -66,13 +68,13 @@ HEADER
 
     color:#d4c09a;
 
-    font-size:13px;
+    font-size:clamp(11px,1.2vw,13px);
 
     font-weight:600;
 
     letter-spacing:4px;
 
-    margin-bottom:28px;
+    margin-bottom:clamp(20px,4vw,28px);
 
 }
 
@@ -80,13 +82,13 @@ HEADER
 
     font-family:"Fustat",sans-serif;
 
-    font-size:74px;
+    font-size:clamp(44px,7vw,74px);
 
     font-weight:700;
 
     line-height:1.05;
 
-    margin-bottom:28px;
+    margin-bottom:clamp(20px,4vw,28px);
 
     color:#fff;
 
@@ -102,7 +104,7 @@ HEADER
 
     color:rgba(255,255,255,.95);
 
-    font-size:22px;
+    font-size:clamp(17px,2vw,22px);
 
     line-height:1.8;
 
@@ -122,9 +124,9 @@ BOTONES
 
     align-items:center;
 
-    gap:22px;
+    gap:clamp(14px,3vw,22px);
 
-    margin-top:90px;
+    margin-top:clamp(45px,8vw,90px);
 
     flex-wrap:wrap;
 
@@ -146,15 +148,17 @@ BOTONES
 
     border:1px solid rgba(255,255,255,.18);
 
-    padding:20px 48px;
+    padding:
+        clamp(14px,2vw,20px)
+        clamp(28px,5vw,48px);
 
-    border-radius:8px;
+    border-radius:clamp(6px,1vw,8px);
 
     cursor:pointer;
 
     font-family:"Fustat",sans-serif;
 
-    font-size:14px;
+    font-size:clamp(13px,1.3vw,14px);
 
     font-weight:700;
 
@@ -162,7 +166,10 @@ BOTONES
 
     text-transform:uppercase;
 
-    transition:.35s;
+    transition:
+        background .35s,
+        color .35s,
+        border-color .35s;
 
 }
 
@@ -173,5 +180,19 @@ BOTONES
     border-color:#d4c09a;
 
     color:#111;
+
+}
+
+@media (max-width:768px){
+
+    .proyectos{
+
+        background-attachment:scroll;
+
+        padding:
+            clamp(70px,10vw,90px)
+            clamp(18px,5vw,24px);
+
+    }
 
 }

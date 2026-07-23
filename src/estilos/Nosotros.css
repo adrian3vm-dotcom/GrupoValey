@@ -2,11 +2,11 @@
 
     width:100%;
 
-    min-height:100vh;
+    min-height:100dvh;
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));
 
     background:#f7f4ef;
 
@@ -44,6 +44,8 @@ IMAGEN
 
     display:block;
 
+    max-width:100%;
+
     transition:.8s;
 
 }
@@ -62,9 +64,9 @@ FIRMA DEL PROYECTO
 
     position:absolute;
 
-    right:28px;
+    right:clamp(18px,3vw,28px);
 
-    bottom:18px;
+    bottom:clamp(14px,2vw,18px);
 
     color:white;
 
@@ -90,7 +92,7 @@ FIRMA DEL PROYECTO
 
     font-family: "Fustat", sans-serif;
 
-    font-size:22px;
+    font-size:clamp(18px,2vw,22px);
 
     font-weight:600;
 
@@ -122,9 +124,13 @@ TEXTO
 
     max-width:650px;
 
+    width:100%;
+
     margin:auto;
 
-    padding:90px;
+    padding:clamp(50px,7vw,90px);
+
+    box-sizing:border-box;
 
 }
 
@@ -140,7 +146,7 @@ TEXTO
 
     font-family:"Fustat", sans-serif;
 
-    font-size:13px;
+    font-size:clamp(11px,1.2vw,13px);
 
     font-weight:700;
 
@@ -166,7 +172,7 @@ TEXTO
 
     font-family: "Fustat", sans-serif;
 
-    font-size:72px;
+    font-size:clamp(42px,6vw,72px);
 
     line-height:.95;
 
@@ -190,7 +196,7 @@ TEXTO
 
     font-family:"Fustat", sans-serif;
 
-    font-size:22px;
+    font-size:clamp(17px,2vw,22px);
 
     line-height:1.8;
 
@@ -214,7 +220,7 @@ BOTÓN
 
     border:none;
 
-    padding:18px 42px;
+    padding:18px clamp(26px,3vw,42px);
 
     font-family:"Fustat", sans-serif;
 
@@ -235,5 +241,80 @@ BOTÓN
     background:#c4a678;
 
     transform:translateY(-3px);
+
+} /*==========================
+RESPONSIVE
+==========================*/
+
+@media (max-width:768px){
+
+.nosotros{
+
+    grid-template-columns:1fr;
+
+    min-height:auto;
+
+}
+
+.nosotrosImagen{
+
+    aspect-ratio:16/10;
+
+    height:auto;
+
+    order:1;
+
+}
+
+.nosotrosTexto{
+
+    order:2;
+
+    max-width:100%;
+
+    padding:clamp(40px,8vw,55px) 24px;
+    
+    text-align:center;
+}
+
+.nosotrosTexto h2{
+
+    font-size:clamp(38px,9vw,48px);
+
+}
+
+.nosotrosTexto p{
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+.subtitulo{
+
+    font-size:11px;
+
+    margin-bottom:18px;
+
+}
+
+.btnNosotros{
+
+    width:100%;
+
+}
+
+.subtitulo{
+
+    justify-content:center;
+
+}
+
+.subtitulo::before{
+
+    display:none;
+
+}
 
 }

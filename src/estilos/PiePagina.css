@@ -1,6 +1,9 @@
-.piePagina {
-    background: #171816;
-    padding: 40px 5% 30px;
+.piePagina{
+    background:#171816;
+    padding:
+        clamp(30px,5vw,40px)
+        5%
+        clamp(24px,4vw,30px);
 }
 
 .piePaginaContenido{
@@ -8,6 +11,7 @@
     grid-template-columns:1fr auto 1fr;
     align-items:center;
 }
+
 .piePaginaNav{
     justify-self:center;
 }
@@ -15,94 +19,100 @@
 .piePaginaRedes{
     justify-self:end;
 }
-.piePaginaLogo {
-    width: 150px;
-    height: auto;
-    display: block;
-    transition: transform .35s ease;
+
+.piePaginaLogo{
+    width:clamp(120px,10vw,150px);
+    height:auto;
+    display:block;
+    transition:transform .35s ease;
 }
 
-.piePaginaLogo:hover {
-    transform: scale(1.03);
+.piePaginaLogo:hover{
+    transform:scale(1.03);
 }
 
-.piePaginaNav {
-    display: flex;
-    align-items: center;
-    gap: 36px;
+.piePaginaNav{
+    display:flex;
+    align-items:center;
+    gap:clamp(20px,3vw,36px);
 }
 
-.piePaginaNav a {
-    position: relative;
-    color: #ECE8E2;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: .4px;
-    transition: color .3s ease;
+.piePaginaNav a{
+    position:relative;
+    color:#ECE8E2;
+    text-decoration:none;
+    font-size:clamp(14px,1.3vw,15px);
+    font-weight:500;
+    letter-spacing:.4px;
+    transition:color .3s ease;
 }
 
-.piePaginaNav a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -7px;
-    width: 0;
-    height: 1px;
-    background: #C4A678;
-    transform: translateX(-50%);
-    transition: width .3s ease;
+.piePaginaNav a::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-7px;
+    width:0;
+    height:1px;
+    background:#C4A678;
+    transform:translateX(-50%);
+    transition:width .3s ease;
 }
 
-.piePaginaNav a:hover {
-    color: #C4A678;
+.piePaginaNav a:hover{
+    color:#C4A678;
 }
 
-.piePaginaNav a:hover::after {
-    width: 100%;
+.piePaginaNav a:hover::after{
+    width:100%;
 }
 
-.piePaginaRedes {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+.piePaginaRedes{
+    display:flex;
+    align-items:center;
+    gap:clamp(12px,2vw,18px);
 }
 
-.piePaginaRedes a {
-    color: #ECE8E2;
-    font-size: 22px;
-    transition: all .3s ease;
+.piePaginaRedes a{
+    color:#ECE8E2;
+    font-size:clamp(18px,2vw,22px);
+    transition:all .3s ease;
 }
 
-.piePaginaRedes a:hover {
-    color: #C4A678;
-    transform: translateY(-2px);
+.piePaginaRedes a:hover{
+    color:#C4A678;
+    transform:translateY(-2px);
 }
 
-.piePaginaLinea {
-    width: 100%;
-    height: 1px;
-    background: rgba(255,255,255,.08);
-    margin: 45px 0 24px;
+.piePaginaLinea{
+    width:100%;
+    height:1px;
+    background:rgba(255,255,255,.08);
+    margin:
+        clamp(30px,5vw,45px)
+        0
+        clamp(18px,3vw,24px);
 }
 
-.piePaginaCopyright {
-    text-align: center;
-    color: rgba(255,255,255,.55);
-    font-size: 14px;
-    letter-spacing: .5px;
+.piePaginaCopyright{
+    text-align:center;
+    color:rgba(255,255,255,.55);
+    font-size:clamp(13px,1.2vw,14px);
+    letter-spacing:.5px;
 }
+
 @media (max-width:1100px){
 
     .piePaginaContenido{
-        flex-direction:column;
-        gap:35px;
+        grid-template-columns:1fr;
+        justify-items:center;
+        gap:clamp(24px,4vw,35px);
     }
 
     .piePaginaNav{
         flex-wrap:wrap;
         justify-content:center;
-        gap:28px;
+        gap:clamp(18px,3vw,28px);
     }
 
 }
@@ -110,16 +120,32 @@
 @media (max-width:768px){
 
     .piePagina{
-        padding:60px 24px 28px;
+
+        padding:
+            clamp(40px,8vw,60px)
+            clamp(18px,5vw,24px)
+            clamp(20px,4vw,28px);
+
     }
 
-    .piePaginaLogo{
-        width:130px;
+    .piePaginaRedes{
+
+        justify-self:center;
+
     }
 
     .piePaginaNav{
+
+        text-align:center;
         flex-direction:column;
-        gap:20px;
+        gap:clamp(16px,3vw,20px);
+
+    }
+
+    .piePaginaLogo{
+
+        width:clamp(110px,20vw,130px);
+
     }
 
 }

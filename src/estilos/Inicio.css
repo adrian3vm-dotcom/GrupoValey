@@ -4,7 +4,17 @@
 
     width:100%;
 
-    height:100vh;
+    min-height:100svh;
+
+    min-height:100dvh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:
+        clamp(90px,10vw,140px)
+        clamp(24px,6vw,70px);
 
     background-image:
     linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
@@ -17,14 +27,6 @@
     background-repeat:no-repeat;
 
     background-attachment:fixed;
-
-    display:flex;
-
-    align-items:center;
-
-    padding-left:60px;
-
-    box-sizing:border-box;
 
 }
 
@@ -40,9 +42,11 @@
 
     max-width:760px;
 
+    width:100%;
+
     color:white;
 
-    transform:translateY(40px);
+    transform:none;
 
 }
 
@@ -52,7 +56,7 @@
 
     font-family:"Fustat",sans-serif;
 
-    font-size:13px;
+    font-size:clamp(11px,1.3vw,13px);
 
     font-weight:600;
 
@@ -68,7 +72,7 @@
 
     font-family:"Fustat",sans-serif;
 
-    font-size:98px;
+    font-size:clamp(44px,8vw,98px);
 
     line-height:.92;
 
@@ -96,7 +100,7 @@
 
     font-family:"Fustat",sans-serif;
 
-    font-size:22px;
+    font-size:clamp(17px,2vw,22px);
 
     line-height:1.8;
 
@@ -124,7 +128,7 @@
 
     border:none;
 
-    padding:18px 38px;
+    padding:16px clamp(24px,3vw,38px);
 
     font-family:"Fustat",sans-serif;
 
@@ -154,7 +158,7 @@
 
     border:1px solid rgba(255,255,255,.35);
 
-    padding:18px 38px;
+    padding:16px clamp(24px,3vw,38px);
 
     font-family:"Fustat",sans-serif;
 
@@ -183,4 +187,86 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+}
+@media (max-width:768px){
+
+.hero{
+
+    min-height:100dvh;
+
+    padding:120px 24px 60px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:left;
+
+    background-attachment:scroll;
+
+}
+
+.heroContenido{
+
+    max-width:100%;
+
+    transform:none;
+
+}
+
+.ubicacion{
+
+    margin-left:0;
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    margin-bottom:18px;
+
+}
+
+.hero h1{
+
+    font-size:clamp(38px,11vw,52px);
+
+    overflow-wrap:anywhere;
+
+    line-height:.95;
+
+    letter-spacing:-1px;
+
+    margin-bottom:22px;
+
+}
+
+.heroDescripcion{
+
+    font-size:17px;
+
+    line-height:1.6;
+
+    max-width:100%;
+
+    margin-bottom:35px;
+
+}
+
+.botones{
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.btnBlanco,
+.btnNegro{
+
+    width:100%;
+
+    padding:18px;
+
+}
+
 }

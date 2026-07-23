@@ -2,11 +2,13 @@
 
     background:white;
 
-    border-radius:22px;
+    border-radius:clamp(16px,2vw,22px);
 
     overflow:hidden;
 
-    transition:.35s;
+    transition:
+        transform .35s,
+        box-shadow .35s;
 
     box-shadow:0 10px 35px rgba(0,0,0,.12);
 
@@ -38,7 +40,7 @@
 
     display:block;
 
-    transition:.5s;
+    transition:transform .5s;
 
 }
 
@@ -58,7 +60,7 @@
 
     opacity:0;
 
-    transition:.35s;
+    transition:opacity .35s;
 
     display:flex;
 
@@ -74,26 +76,35 @@
 
 }
 
-.info {
-    width: 100%;
-    padding: 60px;
+.info{
 
-    color: white;
-    text-align: left;
+    width:100%;
 
-    font-family: "Fustat", sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.6;
+    padding:clamp(28px,6vw,60px);
+
+    color:white;
+
+    text-align:left;
+
+    font-family:"Fustat",sans-serif;
+
+    font-size:clamp(16px,2vw,18px);
+
+    font-weight:600;
+
+    line-height:1.6;
+
 }
 
-.info p {
-    margin: 6px 0;
+.info p{
+
+    margin:6px 0;
+
 }
 
 .logoContainer{
 
-    padding:35px;
+    padding:clamp(22px,4vw,35px);
 
     display:flex;
 
@@ -107,7 +118,7 @@
 
 .logoProyecto{
 
-    height:50px;
+    height:clamp(38px,5vw,50px);
 
     width:auto;
 
@@ -115,14 +126,18 @@
 
     filter:grayscale(100%);
 
-    transition:.35s;
+    transition:filter .35s;
 
 }
+
 .proyectoCard:hover .logoProyecto{
 
     filter:grayscale(0%);
 
 }
-.logoProyecto[alt="Supermercados Leyva"] {
-    height: 58px;
+
+.logoProyecto[alt="Supermercados Leyva"]{
+
+    height:clamp(45px,6vw,58px);
+
 }

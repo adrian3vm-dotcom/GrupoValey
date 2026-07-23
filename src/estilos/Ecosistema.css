@@ -2,7 +2,10 @@
 
     background:#f7f4ef;
 
-    padding:90px 0 70px;
+    padding:
+    clamp(70px,8vw,90px)
+    0
+    clamp(50px,6vw,70px);
 
 }
 
@@ -12,7 +15,9 @@
 
     width:min(850px,90%);
 
-    margin:0 auto 70px;
+    margin:
+    0 auto
+    clamp(45px,6vw,70px);
 
     text-align:center;
 
@@ -26,7 +31,7 @@
 
     letter-spacing:8px;
 
-    font-size:18px;
+    font-size:clamp(13px,1.8vw,18px);
 
 }
 
@@ -34,7 +39,7 @@
 
     margin-top:12px;
 
-    font-size:90px;
+    font-size:clamp(46px,8vw,90px);
 
     color:#171816;
 
@@ -54,7 +59,7 @@
 
     line-height:1.8;
 
-    font-size:20px;
+    font-size:clamp(17px,2vw,20px);
 
 }
 
@@ -68,9 +73,9 @@
 
     display:flex;
 
-    gap:18px;
+    gap:clamp(12px,2vw,18px);
 
-    height:650px;
+    height:clamp(420px,60vw,650px);
 
 }
 
@@ -84,7 +89,7 @@
 
     overflow:hidden;
 
-    border-radius:28px;
+    border-radius:clamp(18px,2vw,28px);
 
     transition:.7s cubic-bezier(.22,1,.36,1);
 
@@ -154,9 +159,11 @@
 
     position:absolute;
 
-    left:38px;
-    right:38px;
-    bottom:25px;
+    left:clamp(20px,3vw,38px);
+
+    right:clamp(20px,3vw,38px);
+
+    bottom:clamp(18px,2vw,25px);
 
     color:white;
 
@@ -169,7 +176,7 @@
 }
 .panel:hover .contenido{
 
-    bottom:1cm;
+    bottom:clamp(30px,4vw,40px);
 
 }
 
@@ -177,7 +184,7 @@
 
     font-family:"Fustat",sans-serif;
 
-    font-size:34px;
+    font-size:clamp(26px,3vw,34px);
 
     font-weight:600;
 
@@ -195,7 +202,7 @@
 
     font-family:"Fustat",sans-serif;
 
-    font-size:16px;
+    font-size:clamp(15px,1.5vw,16px);
 
     line-height:1.7;
 
@@ -231,14 +238,16 @@
 
     width:min(1600px,95%);
 
-    margin:65px auto 0;
+    margin:
+    clamp(45px,6vw,65px)
+    auto
+    0;
 
     display:flex;
 
     align-items:center;
 
-    gap:25px;
-
+    gap:clamp(15px,3vw,25px);
 }
 
 .ecosistemaFooter .linea{
@@ -262,5 +271,58 @@
 .ecosistemaFooter strong{
 
     color:#c4a678;
+
+}
+@media (max-width:768px){
+
+.ecosistema{
+
+    padding:
+    clamp(60px,8vw,80px)
+    0;
+
+}
+
+
+.paneles{
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+    height:auto;
+
+}
+
+.panel{
+
+   height:clamp(220px,40vw,260px);
+
+}
+
+.panel:hover{
+
+    flex:1;
+
+}
+
+.contenido{
+
+    left:clamp(18px,4vw,24px);
+
+    right:clamp(18px,4vw,24px);
+
+}
+
+
+.contenido p{
+
+    opacity:1;
+
+    max-height:200px;
+
+    transform:none;
+
+}
 
 }
