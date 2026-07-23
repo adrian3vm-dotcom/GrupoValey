@@ -2,9 +2,9 @@ import { Routes, Route } from "react-router-dom";
 
 import Encabezado from "./componentes/Encabezado";
 import Inicio from "./componentes/Inicio";
-import Nosotros from "./componentes/Nosotros";
 import Proceso from "./componentes/Proceso";
 import Proyectos from "./componentes/Proyectos";
+import Nosotros from "./componentes/Nosotros";
 import Clientes from "./componentes/Clientes";
 import Cobertura from "./componentes/Cobertura";
 import Ecosistema from "./componentes/Ecosistema";
@@ -20,11 +20,11 @@ function Home() {
     <>
       <Encabezado />
       <Inicio />
-      <Nosotros />
       <Proceso />
       <Proyectos />
       <Clientes />
       <Cobertura />
+      <Nosotros />
       <Ecosistema />
       <Contacto />
       <PiePagina />
