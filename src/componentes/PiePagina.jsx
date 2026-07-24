@@ -1,5 +1,5 @@
 import "../estilos/PiePagina.css";
-import { FaInstagram, FaWhatsapp, FaLinkedinIn } from "react-icons/fa6";
+import { FaInstagram, FaWhatsapp, FaLinkedinIn, FaFacebook } from "react-icons/fa6";
 
 const logo = "/grupo-valey/logo-blanco.webp";
 
@@ -29,12 +29,21 @@ export default function PiePagina() {
         <div className="piePaginaRedes">
 
           <a
-            href="https://www.instagram.com/grupovaley/"
+            href="https://www.instagram.com/grupovaley/" 
             target="_blank"
             rel="noreferrer"
             aria-label="Instagram"
           >
             <FaInstagram size={22} />
+          </a>
+
+          <a
+            href="https://www.facebook.com/GpoValey/"
+            targer="blank"
+            rel="noreferrer"
+            aria-label="Facebook"
+          >
+            <FaFacebook size={22} />
           </a>
 
           <a
