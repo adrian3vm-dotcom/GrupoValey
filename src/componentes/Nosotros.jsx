@@ -13,12 +13,6 @@ function Nosotros() {
 
         <div className="infoProyecto">
 
-          <div className="lineaProyecto"></div>
-
-          <h3>TORRE HAX</h3>
-
-          <p>BAHÍA DE KINO, SONORA</p>
-
         </div>
 
       </div>

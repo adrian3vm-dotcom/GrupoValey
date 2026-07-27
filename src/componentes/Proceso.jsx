@@ -1,10 +1,19 @@
 import { useState } from "react";
+import {
+  Search,
+  DraftingCompass,
+  HardHat,
+  FileCog,
+  BrickWall,
+  Wrench,
+} from "lucide-react";
+
 import "../estilos/Proceso.css";
 
 const procesos = [
   {
     id: 1,
-    icono: "🔍",
+    icono: Search,
     titulo: "Selección de Sitio",
     descripcion:
       "Analizamos la ubicación ideal considerando uso de suelo, accesos, factibilidad de servicios, normativas y potencial de inversión para asegurar el éxito del proyecto.",
@@ -20,7 +29,7 @@ const procesos = [
 
   {
     id: 2,
-    icono: "📐",
+    icono: DraftingCompass,
     titulo: "Diseño",
     descripcion:
       "Desarrollamos propuestas arquitectónicas y de ingeniería buscando funcionalidad, estética y optimización de costos.",
@@ -36,7 +45,7 @@ const procesos = [
 
   {
     id: 3,
-    icono: "🏗",
+    icono: HardHat,
     titulo: "Proyecto Ejecutivo",
     descripcion:
       "Generamos toda la documentación técnica para ejecutar la obra con precisión.",
@@ -52,7 +61,7 @@ const procesos = [
 
   {
     id: 4,
-    icono: "📄",
+    icono: FileCog,
     titulo: "Tramitología",
     descripcion:
       "Gestionamos permisos, licencias y autorizaciones necesarias para desarrollar el proyecto.",
@@ -68,7 +77,7 @@ const procesos = [
 
   {
     id: 5,
-    icono: "🏢",
+    icono: BrickWall,
     titulo: "Construcción",
     descripcion:
       "Ejecutamos la obra con supervisión constante, control de calidad y altos estándares.",
@@ -84,7 +93,7 @@ const procesos = [
 
   {
     id: 6,
-    icono: "🔧",
+    icono: Wrench,
     titulo: "Mantenimiento",
     descripcion:
       "Continuamos respaldando nuestros proyectos mediante mantenimiento preventivo y correctivo.",
@@ -100,21 +109,14 @@ const procesos = [
 ];
 
 function Proceso() {
-
   const [activo, setActivo] = useState(null);
 
   const seleccionar = (item) => {
-
     if (activo?.id === item.id) {
-
       setActivo(null);
-
     } else {
-
       setActivo(item);
-
     }
-
   };
 
   const porcentaje = activo
@@ -122,7 +124,6 @@ function Proceso() {
     : 0;
 
   const obtenerClase = (item) => {
-
     if (!activo) return "paso";
 
     if (item.id === activo.id) return "paso activo";
@@ -130,33 +131,28 @@ function Proceso() {
     if (item.id < activo.id) return "paso izquierda";
 
     return "paso derecha";
-
   };
 
   return (
-        <section id="proceso" className="proceso">
-
+    <section id="proceso" className="proceso">
       <div className="procesoHeader">
-
         <span className="subtituloProceso">
           NUESTRO PROCESO
         </span>
 
         <h2>
-          Nos encargamos de todo el proceso.
+          Nos encargamos de
           <br />
-          
+          todo el proceso.
         </h2>
 
         <p>
           Desde la selección del terreno hasta la entrega del proyecto,
           coordinamos cada etapa para garantizar calidad, eficiencia y control.
         </p>
-
       </div>
 
       <div className="contenedorProceso">
-
         <div className="lineaBase"></div>
 
         <div
@@ -165,88 +161,63 @@ function Proceso() {
         ></div>
 
         <div className="iconosProceso">
+          {procesos.map((item) => {
+            const Icono = item.icono;
 
-          {procesos.map((item) => (
+            return (
+              <div
+                key={item.id}
+                className={obtenerClase(item)}
+                onClick={() => seleccionar(item)}
+              >
+                <div className="circulo">
+                  <Icono
+                    className="iconoProceso"
+                    strokeWidth={1.35}
+                  />
+                </div>
 
-            <div
-              key={item.id}
-              className={obtenerClase(item)}
-              onClick={() => seleccionar(item)}
-            >
-
-              <div className="circulo">
-
-                {item.icono}
-
+                <h3>{item.titulo}</h3>
               </div>
-
-              <h3>{item.titulo}</h3>
-
-            </div>
-
-          ))}
-
+            );
+          })}
         </div>
-
       </div>
 
       {activo && (
-
-        <div className="detalleProceso">
-
+        <div
+          className="detalleProceso"
+          key={activo.id}
+        >
           <div className="detalleImagen">
-
             <img
               src={activo.imagen}
               alt={activo.titulo}
             />
-
           </div>
 
           <div className="detalleTexto">
-
-            <span className="numeroProceso">
-
-              0{activo.id}
-
+            <span className="etiquetaDetalle">
+              GRUPO VALEY
             </span>
 
-            <h3>
+            <h3>{activo.titulo}</h3>
 
-              {activo.titulo}
-
-            </h3>
-
-            <p>
-
-              {activo.descripcion}
-
-            </p>
+            <p>{activo.descripcion}</p>
 
             <ul>
-
-              {activo.puntos.map((punto,index)=>(
-
+              {activo.puntos.map((punto, index) => (
                 <li key={index}>
-
-                  ✓ {punto}
-
+                  <span className="checkProceso">✓</span>
+                  {punto}
                 </li>
-
               ))}
-
             </ul>
-
           </div>
-
         </div>
-
       )}
-
     </section>
-
   );
-
 }
 
 export default Proceso;
