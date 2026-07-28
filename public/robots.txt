@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://grupovaley.com/sitemap.xml
+Sitemap: https://www.grupovaley.com/sitemap.xml
