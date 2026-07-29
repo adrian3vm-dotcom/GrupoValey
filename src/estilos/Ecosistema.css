@@ -1,6 +1,6 @@
 .ecosistema{
 
-    background:#f7f4ef;
+    background:#202020;
 
     padding:
     clamp(70px,8vw,90px)
@@ -41,7 +41,7 @@
 
     font-size:clamp(46px,8vw,90px);
 
-    color:#171816;
+    color:#e3e6e0;
 
     font-family:"Fustat",sans-serif;
 
@@ -55,7 +55,7 @@
 
     max-width:720px;
 
-    color:#666;
+    color:#b0adad;
 
     line-height:1.8;
 
@@ -264,7 +264,7 @@
 
     letter-spacing:3px;
 
-    color:#171816;
+    color:#e3e6e0;;
 
 }
 

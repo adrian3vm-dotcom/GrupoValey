@@ -6,10 +6,19 @@ function Nosotros() {
 
       <div className="nosotrosImagen">
 
-        <img
-          src="/imagenes/nosotros/edificio-principal.webp"
-          alt="Edificio Grupo Valey"
-        />
+<picture>
+
+  <source
+    media="(max-width:768px)"
+    srcSet="/imagenes/nosotros/edificio-principal-mobile.webp"
+  />
+
+  <img
+    src="/imagenes/nosotros/edificio-principal.webp"
+    alt="Equipo de Grupo Valey durante una reunión de seguridad en obra"
+  />
+
+</picture>
 
         <div className="infoProyecto">
 
