@@ -141,9 +141,9 @@ function Proceso() {
         </span>
 
         <h2>
-          Nos encargamos de
+          TE ACOMPAÑAMOS EN TODO
           <br />
-          todo el proceso.
+          EL PROCESO 
         </h2>
 
         <p>

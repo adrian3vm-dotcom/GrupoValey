@@ -49,14 +49,6 @@ IMAGEN
 
 }
 
-.nosotrosImagen picture{
-
-    width:100%;
-    height:100%;
-    display:block;
-
-}
-
 .nosotrosImagen img{
 
     width:100%;
@@ -206,81 +198,136 @@ BOTÓN
 } /*==========================
 RESPONSIVE
 ==========================*/
+/*==========================
+RESPONSIVE - CELULAR
+==========================*/
 
 @media (max-width:768px){
 
-.nosotros{
+    .nosotros{
+        width:100%;
+        grid-template-columns:1fr;
+        min-height:auto;
+        overflow:hidden;
+    }
 
-    grid-template-columns:1fr;
 
-    min-height:auto;
+    /*==========================
+    IMAGEN
+    ==========================*/
 
-}
+    .nosotrosImagen{
+        position:relative;
 
-.nosotrosImagen{
+        width:100%;
+        height:65vh;
+        min-height:480px;
+        max-height:650px;
 
-    aspect-ratio:16/10;
+        aspect-ratio:auto;
 
-    height:auto;
+        overflow:hidden;
 
-    order:1;
+        order:1;
+    }
 
-}
-.nosotrosImagen img{
+    .nosotrosImagen img{
+        display:block;
 
-    object-position:center;
+        width:100%;
+        height:100%;
 
-}
+        object-fit:cover;
 
-.nosotrosTexto{
+        /* Controla qué parte de la foto se conserva */
+        object-position:center center;
 
-    order:2;
+        max-width:none;
+    }
 
-    max-width:100%;
+    /* Quitamos zoom en celular */
+    .nosotrosImagen:hover img{
+        transform:none;
+    }
 
-    padding:clamp(40px,8vw,55px) 24px;
-    
-    text-align:center;
-}
 
-.nosotrosTexto h2{
+    /*==========================
+    TEXTO
+    ==========================*/
 
-    font-size:clamp(38px,9vw,48px);
+    .nosotrosTexto{
+        order:2;
 
-}
+        width:100%;
+        max-width:100%;
 
-.nosotrosTexto p{
+        margin:0;
 
-    font-size:17px;
+        padding:50px 24px 55px;
 
-    line-height:1.7;
+        box-sizing:border-box;
 
-}
+        text-align:center;
+    }
 
-.subtitulo{
 
-    font-size:11px;
+    /*==========================
+    SUBTÍTULO
+    ==========================*/
 
-    margin-bottom:18px;
+    .subtitulo{
+        justify-content:center;
 
-}
+        font-size:11px;
 
-.btnNosotros{
+        margin-bottom:18px;
+    }
 
-    width:100%;
+    .subtitulo::before{
+        display:none;
+    }
 
-}
 
-.subtitulo{
+    /*==========================
+    TÍTULO
+    ==========================*/
 
-    justify-content:center;
+    .nosotrosTexto h2{
+        font-size:clamp(38px,9vw,48px);
 
-}
+        line-height:1;
 
-.subtitulo::before{
+        margin-bottom:28px;
+    }
 
-    display:none;
 
-}
+    /*==========================
+    PÁRRAFOS
+    ==========================*/
+
+    .nosotrosTexto p{
+        font-size:17px;
+
+        line-height:1.7;
+
+        margin-bottom:22px;
+    }
+
+
+    /*==========================
+    BOTÓN
+    ==========================*/
+
+    .btnNosotros{
+        display:block;
+
+        width:100%;
+
+        box-sizing:border-box;
+
+        margin-top:28px;
+
+        text-align:center;
+    }
 
 }

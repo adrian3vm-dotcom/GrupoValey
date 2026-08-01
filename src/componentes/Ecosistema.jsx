@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "../estilos/Ecosistema.css";
 
 const empresas = [
@@ -23,6 +24,14 @@ const empresas = [
 
 export default function Ecosistema() {
 
+    const [panelActivo, setPanelActivo] = useState(null);
+
+    const manejarPanel = (titulo) => {
+        setPanelActivo(
+            panelActivo === titulo ? null : titulo
+        );
+    };
+
     return (
 
         <section id="grupo" className="ecosistema">
@@ -46,8 +55,11 @@ export default function Ecosistema() {
                 {empresas.map((empresa) => (
 
                     <article
-                        className="panel"
+                        className={`panel ${
+                            panelActivo === empresa.titulo ? "activo" : ""
+                        }`}
                         key={empresa.titulo}
+                        onClick={() => manejarPanel(empresa.titulo)}
                     >
 
                         <img
@@ -76,11 +88,9 @@ export default function Ecosistema() {
                 <span className="linea"></span>
 
                 <p>
-
                     UN MISMO GRUPO, UN MISMO COMPROMISO
 
                     <strong> CONSTRUIR VALOR.</strong>
-
                 </p>
 
                 <span className="linea"></span>
@@ -90,5 +100,4 @@ export default function Ecosistema() {
         </section>
 
     );
-
 }

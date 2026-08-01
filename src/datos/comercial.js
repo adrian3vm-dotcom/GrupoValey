@@ -17,6 +17,8 @@ const comerciales = [
     ubicacion: "Hermosillo, Sonora",
     area: "1,500m²",
     anio: "2021",
+
+    posicion: "70% center",
   },
 ];
 

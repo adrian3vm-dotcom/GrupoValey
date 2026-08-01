@@ -115,9 +115,9 @@ function Clientes() {
         </span>
 
         <h2>
-          Empresas que han
+          EMPRESAS 
           <br />
-          confiado en nosotros.
+          QUE HAN CONFIADO EN NOSOTROS
         </h2>
 
         <p>

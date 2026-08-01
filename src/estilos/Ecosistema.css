@@ -45,6 +45,8 @@
 
     font-family:"Fustat",sans-serif;
 
+    font-weight:500;
+
     line-height:1;
 
 }
@@ -275,54 +277,75 @@
 }
 @media (max-width:768px){
 
-.ecosistema{
+    .ecosistema{
+        padding:
+        clamp(60px,8vw,80px)
+        0;
+    }
 
-    padding:
-    clamp(60px,8vw,80px)
-    0;
+    .paneles{
+        flex-direction:column;
+        align-items:stretch;
+        height:auto;
+    }
 
-}
+    .panel{
+        height:clamp(220px,40vw,260px);
+        flex:none;
+    }
 
+    /* CANCELAMOS COMPLETAMENTE EL HOVER EN CELULAR */
+    .panel:hover{
+        flex:none;
+    }
 
-.paneles{
+    .panel:hover img{
+        transform:none;
+    }
 
-    flex-direction:column;
+    .panel:hover .contenido{
+        bottom:clamp(18px,2vw,25px);
+    }
 
-    align-items:stretch;
+    .panel:hover .contenido p{
+        opacity:0;
+        max-height:0;
+        margin-top:0;
+        transform:translateY(15px);
+    }
 
-    height:auto;
+    /* POSICIÓN NORMAL */
+    .contenido{
+        left:clamp(18px,4vw,24px);
+        right:clamp(18px,4vw,24px);
+        bottom:20px;
+    }
 
-}
+    /* DESCRIPCIÓN CERRADA */
+    .contenido p{
+        opacity:0;
+        max-height:0;
+        margin-top:0;
+        overflow:hidden;
+        transform:translateY(15px);
 
-.panel{
+        transition:
+            opacity .35s ease,
+            transform .45s ease,
+            max-height .45s ease,
+            margin .45s ease;
+    }
 
-   height:clamp(220px,40vw,260px);
+    /* PANEL ABIERTO */
+    .panel.activo .contenido{
+        bottom:26px;
+    }
 
-}
-
-.panel:hover{
-
-    flex:1;
-
-}
-
-.contenido{
-
-    left:clamp(18px,4vw,24px);
-
-    right:clamp(18px,4vw,24px);
-
-}
-
-
-.contenido p{
-
-    opacity:1;
-
-    max-height:200px;
-
-    transform:none;
-
-}
+    .panel.activo .contenido p{
+        opacity:1;
+        max-height:120px;
+        margin-top:12px;
+        transform:translateY(0);
+    }
 
 }

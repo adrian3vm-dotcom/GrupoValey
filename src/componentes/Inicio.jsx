@@ -19,6 +19,7 @@ function Inicio() {
           <span className="dorado">
             VALOR REAL
           </span>
+
           <br />
 
           PARA TU INVERSIÓN

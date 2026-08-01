@@ -185,14 +185,54 @@ BOTONES
 
 @media (max-width:768px){
 
-    .proyectos{
+.proyectos{
 
-        background-attachment:scroll;
+    background-image:none;
 
-        padding:
-            clamp(70px,10vw,90px)
-            clamp(18px,5vw,24px);
+    padding:
+        clamp(70px,10vw,90px)
+        clamp(18px,5vw,24px);
 
-    }
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.proyectos::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-15% 0;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.30),
+            rgba(0,0,0,.30)
+        ),
+        url("/proyectos/proyecto.webp");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    z-index:0;
+
+    transform:translateZ(0);
+
+}
+
+.proyectosHeader,
+.categorias{
+
+    position:relative;
+
+    z-index:2;
+
+}
 
 }

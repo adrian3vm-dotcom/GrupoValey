@@ -12,9 +12,9 @@ function Cobertura() {
           </span>
 
           <h2>
-            Trayectoria que
+            TRAYECTORIA QUE 
             <br />
-            construye <em>confianza.</em>
+            CONSTRUYE  <em>CONFIANZA</em>
           </h2>
 
           <p className="coberturaTexto">

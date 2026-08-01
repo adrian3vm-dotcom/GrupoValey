@@ -84,7 +84,7 @@ export default function Contacto() {
 
                         <br /><br />
 
-                        admin@grupovaley.com
+                        | admin@grupovaley.com |
 
                     </p>
 

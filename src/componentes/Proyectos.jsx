@@ -23,9 +23,9 @@ function Proyectos() {
 
         <h2>
 
-          Experiencia que se
+          EXPERIENCIA QUE SE 
           <br />
-          construye.
+          CONSTRUYE
 
         </h2>
 

@@ -14,25 +14,25 @@ PROCESO
     background-repeat: no-repeat;
 
     color: #ffffff;
+    
 
     padding:
         clamp(80px, 10vw, 140px)
         clamp(24px, 6vw, 70px);
 
     overflow: hidden;
+    
 }
 .proceso::before {
     content: "";
-
     position: absolute;
     inset: 0;
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(0, 0, 0, 0.10) 0%,
-            rgba(0, 0, 0, 0.30) 100%
-        );
+    background: rgba(0, 0, 0, 0);
+
+    pointer-events: none;
+    z-index: 0;
+
 
     pointer-events: none;
 
@@ -54,6 +54,7 @@ HEADER
     max-width: 900px;
     margin: auto;
     text-align: center;
+    
 }
 
 .subtituloProceso {
@@ -72,9 +73,11 @@ HEADER
     font-family: "Fustat", sans-serif;
 
     font-size: clamp(46px, 7vw, 82px);
+    font-weight: 500;
     line-height: 0.95;
 
     margin: 0 0 35px;
+    
 }
 
 .procesoHeader p {

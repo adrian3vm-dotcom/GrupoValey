@@ -10,6 +10,9 @@ function ProyectoCard({ proyecto }) {
           src={proyecto.imagen}
           alt={proyecto.cliente}
           className="imagenProyecto"
+          style={{
+            objectPosition: proyecto.posicion || "center center"
+          }}
         />
 
         <div className="overlay">

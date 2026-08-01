@@ -6,25 +6,16 @@ function Nosotros() {
 
       <div className="nosotrosImagen">
 
-<picture>
-
-  <source
-    media="(max-width:768px)"
-    srcSet="/imagenes/nosotros/edificio-principal-mobile.webp"
-  />
-
-  <img
-    src="/imagenes/nosotros/edificio-principal.webp"
-    alt="Equipo de Grupo Valey durante una reunión de seguridad en obra"
-  />
-
-</picture>
+        <img
+          src="/imagenes/nosotros/edificio-principal.webp"
+          alt="Equipo de Grupo Valey durante una reunión de seguridad en obra"
+        />
 
         <div className="infoProyecto">
-
         </div>
 
       </div>
+
 
       <div className="nosotrosTexto">
 
@@ -33,7 +24,7 @@ function Nosotros() {
         </span>
 
         <h2>
-          Un grupo <span>sólido</span> con visión de futuro
+          UN GRUPO <span>SÓLIDO</span> CON VISIÓN DE FUTURO
         </h2>
 
         <p>

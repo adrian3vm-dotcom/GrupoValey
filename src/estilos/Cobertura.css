@@ -45,7 +45,7 @@
 
     font-family: "Fustat", sans-serif;
     font-size: clamp(48px, 5vw, 78px);
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.03;
     letter-spacing: -2px;
 }
