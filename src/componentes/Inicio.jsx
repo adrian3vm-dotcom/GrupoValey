@@ -8,10 +8,6 @@ function Inicio() {
 
       <div className="heroContenido">
 
-        <p className="ubicacion">
-          HERMOSILLO, SONORA
-        </p>
-
         <h1>
           CONSTRUIMOS
           <br />

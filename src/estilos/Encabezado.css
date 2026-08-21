@@ -1,3 +1,7 @@
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
 .encabezado{
 
     position:fixed;
@@ -8,11 +12,11 @@
 
     width:100%;
 
-    height:clamp(70px,7vw,78px);
+    height:78px;
 
     padding:0 clamp(18px,4vw,45px);
 
-    background:#f7f4ef;
+    background:transparent;
 
     display:flex;
 
@@ -24,32 +28,95 @@
 
     z-index:1000;
 
+    box-shadow:none;
+
+    transition:
+        background .4s ease,
+        height .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+/* =========================================================
+   ENCABEZADO AL HACER SCROLL
+   ========================================================= */
+
+.encabezado.scrolled{
+
+    height:68px;
+
+    background:rgba(247,244,239,.96);
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
     box-shadow:0 1px 8px rgba(0,0,0,.05);
 
 }
 
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
 .logo-contenedor{
+
     display:flex;
+
     align-items:center;
+
+}
+
+.logo-contenedor a{
+
+    display:flex;
+
+    align-items:center;
+
+    text-decoration:none;
+
 }
 
 .logo{
 
-    width:clamp(150px,18vw,210px);
+    width:clamp(135px,16vw,190px);
+
+    height:auto;
+
+    display:block;
 
     cursor:pointer;
 
+    transition:
+
+        width .4s ease;
+
 }
 
-.nombre-empresa{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    margin-left:14px;
-    line-height:1;
+
+/* Logo un poco más pequeño al hacer scroll */
+
+.encabezado.scrolled .logo{
+
+    width:clamp(125px,15vw,175px);
+    opacity:0.78;
+
 }
+
+
+/* =========================================================
+   MENÚ
+   ========================================================= */
 
 .menu{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
 
     display:flex;
 
@@ -60,176 +127,265 @@
     gap:clamp(22px,4vw,55px);
 
 }
+
 .menu a{
+
     text-decoration:none;
-    color:#555;
-    font-size:clamp(11px,1vw,12px);
-    font-weight:600;
-    letter-spacing:2px;
-    transition:.3s;
-}
 
-.menu a:hover{
-    color:#111;
-}
-
-.acciones{
-    display:flex;
-    justify-content:flex-end;
-}
-
-.acciones button{
-    background:#111;
     color:white;
 
-    border:none;
-
-    padding:15px clamp(22px,3vw,30px);
-
-    cursor:pointer;
-
-    font-size:12px;
-
-    font-weight:700;
-
-    letter-spacing:2px;
-
-    transition:.3s;
-}
-
-.acciones button:hover{
-    background:#c4a678;
-
-}
-@media (max-width:768px){
-
-.encabezado{
-
-    padding:0 18px;
-
-    height:70px;
-
-}
-
-.logo{
-
-    width:150px;
-
-}
-
-.menu{
-
-    display:none;
-
-}
-
-.acciones{
-
-    display:none;
-
-}
-
-} 
-/*=============================
-MENU HAMBURGUESA
-=============================*/
-
-.hamburguesa{
-
-    display:none;
-
-}
-
-.menuMovil{
-
-    display:none;
-
-}
-
-@media (max-width:768px){
-
-.hamburguesa{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    width:46px;
-
-    height:46px;
-
-    border:none;
-
-    background:transparent;
-
-    font-size:32px;
-
-    cursor:pointer;
-
-    color:#171816;
-
-}
-
-.menuMovil{
-
-    position:fixed;
-
-    top:70px;
-
-    right:-100%;
-
-    width:280px;
-
-    height:calc(100dvh - 70px);
-
-    background:#f7f4ef;
-
-    display:flex;
-
-    flex-direction:column;
-
-    padding:40px 30px;
-
-    gap:28px;
-
-    transition:right .35s ease;
-
-    box-shadow:-10px 0 25px rgba(0,0,0,.08);
-
-}
-
-.menuMovil.activo{
-
-    right:0;
-
-}
-
-.menuMovil a{
-
-    color:#171816;
-
-    font-size:17px;
+    font-size:clamp(11px,1vw,12px);
 
     font-weight:600;
 
-    letter-spacing:1px;
+    letter-spacing:2px;
+
+    transition:
+
+        color .8s ease;
 
 }
 
-.btnMenu{
 
-    margin-top:20px;
+/* Menú al hacer scroll */
 
-    background:#171816;
+.encabezado.scrolled .menu a{
 
-    color:white !important;
-
-    text-align:center;
-
-    padding:16px;
+    color:#555;
 
 }
+
+
+/* Hover arriba */
+
+.menu a:hover{
+
+    color:white;
+
+}
+
+
+/* Hover con fondo */
+
+.encabezado.scrolled .menu a:hover{
+
+    color:#111;
+
+}
+
+
+/* =========================================================
+   MENÚ MÓVIL
+   ========================================================= */
+
+.menuMovil{
+
+    display:none;
+
+}
+
+
+/* =========================================================
+   HAMBURGUESA
+   ========================================================= */
+
+.hamburguesa{
+
+    display:none;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width:768px){
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    .encabezado{
+
+        height:70px;
+
+        padding:0 18px;
+
+    }
+
+
+    .encabezado.scrolled{
+
+        height:64px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       LOGO
+       ----------------------------------------------------- */
+
+    .logo{
+
+        width:135px;
+
+    }
+
+    .encabezado.scrolled .logo{
+
+        width:125px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       MENÚ ESCRITORIO
+       ----------------------------------------------------- */
+
+    .menu{
+
+        display:none;
+
+    }
+
+
+    /* -----------------------------------------------------
+       HAMBURGUESA
+       ----------------------------------------------------- */
+
+    .hamburguesa{
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:flex-end;
+
+        gap:5px;
+
+        width:46px;
+
+        height:46px;
+
+        padding:0;
+
+        border:none;
+
+        background:transparent;
+
+        cursor:pointer;
+
+    }
+
+
+    .hamburguesa span{
+
+        display:block;
+
+        width:24px;
+
+        height:2px;
+
+        background:white;
+
+        transition:
+
+            background .4s ease;
+
+    }
+
+
+    /* Hamburguesa negra con fondo */
+
+    .encabezado.scrolled .hamburguesa span{
+
+        background:#171816;
+
+    }
+
+
+    /* -----------------------------------------------------
+       MENÚ MÓVIL
+       ----------------------------------------------------- */
+
+    .menuMovil{
+
+        position:fixed;
+
+        top:70px;
+
+        right:-100%;
+
+        width:280px;
+
+        height:calc(100dvh - 70px);
+
+        background:#f7f4ef;
+
+        display:flex;
+
+        flex-direction:column;
+
+        padding:40px 30px;
+
+        gap:28px;
+
+        box-sizing:border-box;
+
+        transition:right .35s ease;
+
+        box-shadow:-10px 0 25px rgba(0,0,0,.08);
+
+    }
+
+
+    /* Menú abierto */
+
+    .menuMovil.activo{
+
+        right:0;
+
+    }
+
+
+    /* -----------------------------------------------------
+       ENLACES MENÚ MÓVIL
+       ----------------------------------------------------- */
+
+    .menuMovil a{
+
+        color:#171816;
+
+        font-size:17px;
+
+        font-weight:600;
+
+        letter-spacing:1px;
+
+        text-decoration:none;
+
+    }
+
+
+    /* -----------------------------------------------------
+       BOTÓN COTIZAR MÓVIL
+       ----------------------------------------------------- */
+
+    .btnMenu{
+
+        margin-top:20px;
+
+        background:#171816;
+
+        color:white !important;
+
+        text-align:center;
+
+        padding:16px;
+
+    }
 
 }

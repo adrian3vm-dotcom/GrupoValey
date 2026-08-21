@@ -1,26 +1,81 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../estilos/Encabezado.css";
 
 function Encabezado() {
 
   const [menuAbierto, setMenuAbierto] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const cerrarMenu = () => setMenuAbierto(false);
+  const cerrarMenu = () => {
+    setMenuAbierto(false);
+  };
+
+  useEffect(() => {
+
+    const manejarScroll = () => {
+
+      setScrolled(window.scrollY > 60);
+
+    };
+
+    window.addEventListener(
+      "scroll",
+      manejarScroll,
+      {
+        passive: true
+      }
+    );
+
+    manejarScroll();
+
+    return () => {
+
+      window.removeEventListener(
+        "scroll",
+        manejarScroll
+      );
+
+    };
+
+  }, []);
 
   return (
-    <header className="encabezado">
+
+    <header
+      className={`encabezado ${
+        scrolled ? "scrolled" : ""
+      }`}
+    >
+
+      {/* =====================================================
+          LOGO
+          ===================================================== */}
 
       <div className="logo-contenedor">
-        <a href="#inicio" onClick={cerrarMenu}>
+
+        <a
+          href="#inicio"
+          onClick={cerrarMenu}
+        >
+
           <img
-            src="/grupo-valey/logo-negro.webp"
+            src={
+              scrolled
+                ? "/grupo-valey/logo-negro.webp"
+                : "/grupo-valey/logo--blanco.webp"
+            }
             alt="Grupo Valey"
             className="logo"
           />
+
         </a>
+
       </div>
 
-      {/* MENÚ ESCRITORIO */}
+
+      {/* =====================================================
+          MENÚ ESCRITORIO
+          ===================================================== */}
 
       <nav className="menu">
 
@@ -42,48 +97,59 @@ function Encabezado() {
 
       </nav>
 
-      <div className="acciones">
 
-        <a href="#contacto">
-
-          <button>
-
-            COTIZAR
-
-          </button>
-
-        </a>
-
-      </div>
-
-      {/* BOTÓN HAMBURGUESA */}
+      {/* =====================================================
+          BOTÓN HAMBURGUESA
+          ===================================================== */}
 
       <button
         className="hamburguesa"
-        onClick={() => setMenuAbierto(!menuAbierto)}
+        onClick={() =>
+          setMenuAbierto(!menuAbierto)
+        }
+        aria-label="Abrir menú"
       >
+
         ☰
+
       </button>
 
-      {/* MENÚ MÓVIL */}
+
+      {/* =====================================================
+          MENÚ MÓVIL
+          ===================================================== */}
 
       <div
-        className={`menuMovil ${menuAbierto ? "activo" : ""}`}
+        className={`menuMovil ${
+          menuAbierto ? "activo" : ""
+        }`}
       >
 
-        <a href="#proyectos" onClick={cerrarMenu}>
+        <a
+          href="#proyectos"
+          onClick={cerrarMenu}
+        >
           Constructora
         </a>
 
-        <a href="#proceso" onClick={cerrarMenu}>
+        <a
+          href="#proceso"
+          onClick={cerrarMenu}
+        >
           Servicios
         </a>
 
-        <a href="#cobertura" onClick={cerrarMenu}>
+        <a
+          href="#cobertura"
+          onClick={cerrarMenu}
+        >
           Presencia
         </a>
 
-        <a href="#contacto" onClick={cerrarMenu}>
+        <a
+          href="#contacto"
+          onClick={cerrarMenu}
+        >
           Contacto
         </a>
 
@@ -98,6 +164,7 @@ function Encabezado() {
       </div>
 
     </header>
+
   );
 
 }
