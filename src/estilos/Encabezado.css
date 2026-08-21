@@ -124,7 +124,7 @@
 
     align-items:center;
 
-    gap:clamp(22px,4vw,55px);
+    gap:clamp(30px,5vw,70px);
 
 }
 
