@@ -14,6 +14,7 @@ import PiePagina from "./componentes/PiePagina";
 import Industrial from "./paginas/Industrial";
 import Comercial from "./paginas/Comercial";
 import Habitacional from "./paginas/Habitacional";
+import PoliticaPrivacidad from "./paginas/PoliticaPrivacidad";
 
 function Home() {
   return (
@@ -51,6 +52,12 @@ function App() {
         path="/proyectos/habitacional"
         element={<Habitacional />}
       />
+      
+      <Route
+        path="/politica-de-privacidad"
+         element={<PoliticaPrivacidad />}
+      />
+      
     </Routes>
   );
 }

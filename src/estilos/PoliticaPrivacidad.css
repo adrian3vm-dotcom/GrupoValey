@@ -1,0 +1,263 @@
+/* =========================================
+   POLÍTICA DE PRIVACIDAD
+========================================= */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+.politicaPrivacidad {
+  margin: 0;
+  padding-top: 0;
+}
+.politicaPrivacidad {
+  min-height: 100vh;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.78),
+      rgba(0, 0, 0, 0.82)
+    ),
+    url("/grupo-valey/politica-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  padding: 3rem 2rem 6rem;
+}
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.politicaContenidoWrapper {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  backdrop-filter: blur(14px);
+
+  border-radius: 32px;
+
+  padding: 5rem;
+
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.25);
+}
+
+/* =========================================
+   VOLVER
+========================================= */
+
+.politicaHeroVolver {
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-bottom: 3rem;
+
+  color: #6A8F4A;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: .3s ease;
+}
+
+.politicaHeroVolver:hover {
+  transform: translateX(-5px);
+}
+
+/* =========================================
+   TAG
+========================================= */
+
+.politicaHeroTag {
+  display: inline-flex;
+
+  margin-bottom: 1rem;
+
+  color: #6A8F4A;
+
+  font-size: .85rem;
+
+  font-weight: 700;
+
+  letter-spacing: .2em;
+
+  text-transform: uppercase;
+}
+
+/* =========================================
+   TITULO
+========================================= */
+
+.politicaPrivacidad h1 {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+
+  font-weight: 800;
+
+  line-height: .9;
+
+  letter-spacing: -.05em;
+
+  color: #1A1A1A;
+
+  margin-bottom: 2rem;
+}
+
+/* =========================================
+   FECHA
+========================================= */
+
+.politicaFecha {
+  display: inline-flex;
+
+  padding: .85rem 1.4rem;
+
+  border-radius: 999px;
+
+  background: rgba(106,143,74,.08);
+
+  border: 1px solid rgba(106,143,74,.2);
+
+  color: #6A8F4A;
+
+  font-size: .85rem;
+
+  font-weight: 700;
+
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
+
+  margin-bottom: 4rem;
+}
+
+/* =========================================
+   TITULOS
+========================================= */
+
+.politicaContenidoWrapper h2 {
+  position: relative;
+
+  font-size: 2rem;
+
+  color: #1A1A1A;
+
+  margin-top: 4rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.politicaContenidoWrapper h2::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: -1rem;
+
+  width: 70px;
+  height: 4px;
+
+  background: #6A8F4A;
+}
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.politicaContenidoWrapper p,
+.politicaContenidoWrapper li {
+  color: #505050;
+
+  font-size: 1.08rem;
+
+  line-height: 2;
+}
+
+.politicaContenidoWrapper ul {
+  padding-left: 1.5rem;
+
+  margin: 2rem 0;
+}
+
+.politicaContenidoWrapper li {
+  margin-bottom: .75rem;
+}
+
+/* =========================================
+   BLOQUE DESTACADO
+========================================= */
+
+.politicaDestacado {
+  margin: 3rem 0;
+
+  padding: 2rem;
+
+  border-left: 4px solid #6A8F4A;
+
+  background: #F8F8F8;
+
+  border-radius: 16px;
+}
+
+/* =========================================
+   CONTACTO
+========================================= */
+
+.politicaContacto {
+  margin-top: 5rem;
+
+  padding: 3rem;
+
+  border-radius: 24px;
+
+  background: #1A1A1A;
+}
+
+.politicaContacto h2,
+.politicaContacto p {
+  color: white;
+}
+
+.politicaContacto h2::before {
+  background: #6A8F4A;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .politicaPrivacidad {
+    padding: 1.5rem 1rem 4rem;
+  }
+
+  .politicaContenidoWrapper {
+    padding: 2rem;
+    border-radius: 24px;
+  }
+
+  .politicaPrivacidad h1 {
+    font-size: 3rem;
+  }
+
+  .politicaContenidoWrapper h2 {
+    font-size: 1.5rem;
+  }
+
+  .politicaContenidoWrapper p,
+  .politicaContenidoWrapper li {
+    font-size: 1rem;
+  }
+}
