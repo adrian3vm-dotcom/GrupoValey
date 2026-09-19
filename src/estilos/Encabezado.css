@@ -1,391 +1,210 @@
 /* =========================================================
    ENCABEZADO
-   ========================================================= */
+========================================================= */
 
-.encabezado{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:78px;
-
-    padding:0 clamp(18px,4vw,45px);
-
-    background:transparent;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    box-sizing:border-box;
-
-    z-index:1000;
-
-    box-shadow:none;
-
-    transition:
-        background .4s ease,
-        height .4s ease,
-        box-shadow .4s ease;
-
+.encabezado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 78px;
+  padding: 0 clamp(18px, 4vw, 45px);
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 1000;
+  box-shadow: none;
+  transition:
+    background .4s ease,
+    height .4s ease,
+    box-shadow .4s ease;
 }
-
 
 /* =========================================================
-   ENCABEZADO AL HACER SCROLL
-   ========================================================= */
+   SCROLL
+========================================================= */
 
-.encabezado.scrolled{
-
-    height:68px;
-
-    background:rgba(247,244,239,.96);
-
-    backdrop-filter:blur(14px);
-
-    -webkit-backdrop-filter:blur(14px);
-
-    box-shadow:0 1px 8px rgba(0,0,0,.05);
-
+.encabezado.scrolled {
+  height: 68px;
+  background: rgba(247, 244, 239, .96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 8px rgba(0,0,0,.05);
 }
-
 
 /* =========================================================
    LOGO
-   ========================================================= */
+========================================================= */
 
-.logo-contenedor{
-
-    display:flex;
-
-    align-items:center;
-
+.logo-contenedor {
+  display: flex;
+  align-items: center;
 }
 
-.logo-contenedor a{
-
-    display:flex;
-
-    align-items:center;
-
-    text-decoration:none;
-
+.logo-contenedor a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-.logo{
-
-    width:clamp(135px,16vw,190px);
-
-    height:auto;
-
-    display:block;
-
-    cursor:pointer;
-
-    transition:
-
-        width .4s ease;
-
+.logo {
+  width: clamp(135px,16vw,190px);
+  height: auto;
+  display: block;
+  cursor: pointer;
+  transition: width .4s ease;
 }
 
-
-/* Logo un poco más pequeño al hacer scroll */
-
-.encabezado.scrolled .logo{
-
-    width:clamp(125px,15vw,175px);
-    opacity:0.78;
-
+.encabezado.scrolled .logo {
+  width: clamp(125px,15vw,175px);
+  opacity: .78;
 }
-
 
 /* =========================================================
-   MENÚ
-   ========================================================= */
+   MENÚ DESKTOP
+========================================================= */
 
-.menu{
-
-    position:absolute;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:clamp(30px,5vw,70px);
-
+.menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(30px,5vw,70px);
 }
 
-.menu a{
-
-    text-decoration:none;
-
-    color:white;
-
-    font-size:clamp(11px,1vw,12px);
-
-    font-weight:600;
-
-    letter-spacing:2px;
-
-    transition:
-
-        color .8s ease;
-
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: clamp(11px,1vw,12px);
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: color .4s ease;
 }
 
-
-/* Menú al hacer scroll */
-
-.encabezado.scrolled .menu a{
-
-    color:#555;
-
+.encabezado.scrolled .menu a {
+  color: #555;
 }
 
-
-/* Hover arriba */
-
-.menu a:hover{
-
-    color:white;
-
+.menu a:hover {
+  color: white;
 }
 
-
-/* Hover con fondo */
-
-.encabezado.scrolled .menu a:hover{
-
-    color:#111;
-
+.encabezado.scrolled .menu a:hover {
+  color: #111;
 }
-
 
 /* =========================================================
    MENÚ MÓVIL
-   ========================================================= */
+========================================================= */
 
-.menuMovil{
-
-    display:none;
-
+.menuMovil {
+  display: none;
 }
-
 
 /* =========================================================
    HAMBURGUESA
-   ========================================================= */
+========================================================= */
 
-.hamburguesa{
-
-    display:none;
-
+.hamburguesa {
+  display: none;
 }
-
 
 /* =========================================================
    RESPONSIVE
-   ========================================================= */
-
-@media (max-width:768px){
-
-    /* -----------------------------------------------------
-       HEADER
-       ----------------------------------------------------- */
-
-    .encabezado{
-
-        height:70px;
-
-        padding:0 18px;
-
-    }
-
-
-    .encabezado.scrolled{
-
-        height:64px;
-
-    }
-
-
-    /* -----------------------------------------------------
-       LOGO
-       ----------------------------------------------------- */
-
-    .logo{
-
-        width:135px;
-
-    }
-
-    .encabezado.scrolled .logo{
-
-        width:125px;
-
-    }
-
-
-    /* -----------------------------------------------------
-       MENÚ ESCRITORIO
-       ----------------------------------------------------- */
-
-    .menu{
-
-        display:none;
-
-    }
-
-
-    /* -----------------------------------------------------
-       HAMBURGUESA
-       ----------------------------------------------------- */
-
-    .hamburguesa{
-
-        display:flex;
-
-        flex-direction:column;
-
-        justify-content:center;
-
-        align-items:flex-end;
-
-        gap:5px;
-
-        width:46px;
-
-        height:46px;
-
-        padding:0;
-
-        border:none;
-
-        background:transparent;
-
-        cursor:pointer;
-
-    }
-
-
-    .hamburguesa span{
-
-        display:block;
-
-        width:24px;
-
-        height:2px;
-
-        background:white;
-
-        transition:
-
-            background .4s ease;
-
-    }
-
-
-    /* Hamburguesa negra con fondo */
-
-    .encabezado.scrolled .hamburguesa span{
-
-        background:#171816;
-
-    }
-
-
-    /* -----------------------------------------------------
-       MENÚ MÓVIL
-       ----------------------------------------------------- */
-
-    .menuMovil{
-
-        position:fixed;
-
-        top:70px;
-
-        right:-100%;
-
-        width:280px;
-
-        height:calc(100dvh - 70px);
-
-        background:#f7f4ef;
-
-        display:flex;
-
-        flex-direction:column;
-
-        padding:40px 30px;
-
-        gap:28px;
-
-        box-sizing:border-box;
-
-        transition:right .35s ease;
-
-        box-shadow:-10px 0 25px rgba(0,0,0,.08);
-
-    }
-
-
-    /* Menú abierto */
-
-    .menuMovil.activo{
-
-        right:0;
-
-    }
-
-
-    /* -----------------------------------------------------
-       ENLACES MENÚ MÓVIL
-       ----------------------------------------------------- */
-
-    .menuMovil a{
-
-        color:#171816;
-
-        font-size:17px;
-
-        font-weight:600;
-
-        letter-spacing:1px;
-
-        text-decoration:none;
-
-    }
-
-
-    /* -----------------------------------------------------
-       BOTÓN COTIZAR MÓVIL
-       ----------------------------------------------------- */
-
-    .btnMenu{
-
-        margin-top:20px;
-
-        background:#171816;
-
-        color:white !important;
-
-        text-align:center;
-
-        padding:16px;
-
-    }
-
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .encabezado {
+    height: 70px;
+    padding: 0 18px;
+  }
+
+  .encabezado.scrolled {
+    height: 64px;
+  }
+
+  .logo {
+    width: 135px;
+  }
+
+  .encabezado.scrolled .logo {
+    width: 125px;
+  }
+
+  /* MENÚ DESKTOP */
+
+  .menu {
+    display: none;
+  }
+
+  /* HAMBURGUESA */
+
+  .hamburguesa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .hamburguesa span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    transition: background .4s ease;
+  }
+
+  .encabezado.scrolled .hamburguesa span {
+    background: #171816;
+  }
+
+  /* MENÚ MÓVIL */
+
+  .menuMovil {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 280px;
+    height: calc(100dvh - 70px);
+    background: #f7f4ef;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+    gap: 28px;
+    box-sizing: border-box;
+    transition: right .35s ease;
+    box-shadow: -10px 0 25px rgba(0,0,0,.08);
+  }
+
+  .menuMovil.activo {
+    right: 0;
+  }
+
+  .menuMovil a {
+    color: #171816;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+
+  .btnMenu {
+    margin-top: 20px;
+    background: #171816;
+    color: white !important;
+    text-align: center;
+    padding: 16px;
+  }
 }
