@@ -1,5 +1,14 @@
+
 {
   "rewrites": [
+    {
+      "source": "/contacto/adan-valenzuela",
+      "destination": "/contacto/adan-valenzuela/index.html"
+    },
+    {
+      "source": "/contacto/adan-valenzuela/",
+      "destination": "/contacto/adan-valenzuela/index.html"
+    },
     {
       "source": "/((?!.*\\.).*)",
       "destination": "/index.html"
