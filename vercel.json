@@ -10,6 +10,14 @@
       "destination": "/contacto/adan-valenzuela/index.html"
     },
     {
+      "source": "/contacto/raul-campa",
+      "destination": "/contacto/raul-campa/index.html"
+    },
+    {
+      "source": "/contacto/raul-campa/",
+      "destination": "/contacto/raul-campa/index.html"
+    },
+    {
       "source": "/((?!.*\\.).*)",
       "destination": "/index.html"
     }
